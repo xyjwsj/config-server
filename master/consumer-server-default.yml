@@ -1,0 +1,11 @@
+server:
+  port: 6001
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:7001/eureka/
+    eureka-server-read-timeout-seconds: 5000
+  instance:
+    hostname: discovery-server
+    prefer-ip-address: true
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000  ##暂时这样
