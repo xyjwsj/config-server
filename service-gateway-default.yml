@@ -4,3 +4,17 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+zuul:
+  routes:
+    user: 
+      path: /api-user/**
+      url: http://localhost:6001/user
+    order: 
+      path: /api-order/**
+      url: http://localhost:6001/order
+    validatechannel: 
+      path: /api-validatechannel/**
+      url: http://localhost:6001/validatechannel
+    notify: 
+      path: /api-notify/**
+      url: http://localhost:6001/notify
