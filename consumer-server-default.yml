@@ -8,4 +8,4 @@ eureka:
   instance:
     hostname: discovery-server
     prefer-ip-address: true
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000  ##暂时这样
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000  ##暂时这样
