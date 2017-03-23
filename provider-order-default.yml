@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone : http://191.168.150.158:7001/eureka/
+      defaultZone : http://192.168.150.158:7001/eureka/
   instance:
     hostname: discovery-server
     prefer-ip-address: true
