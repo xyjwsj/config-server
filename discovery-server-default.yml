@@ -1,9 +1,9 @@
 server:
   port: 7001
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-#  instance:
-#    metadata-map:
-#      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
