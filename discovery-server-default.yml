@@ -5,6 +5,6 @@ server:
     fetch-registry: false
 eureka:
   instance:
-    prefer-ip-address: true
+#    prefer-ip-address: true
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
