@@ -1,7 +1,8 @@
 server:
   port: 7001
-application:
-  name: discovery-server
+spring:
+  application:
+    name: discovery-server
 eureka:
   client:
     register-with-eureka: false
