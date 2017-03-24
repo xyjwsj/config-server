@@ -4,6 +4,11 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: http://192.168.150.158:${server.port}/eureka
   instance:
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
