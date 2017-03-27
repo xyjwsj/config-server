@@ -27,7 +27,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.150.158:3306/idea_database?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: xyjwsj
+    password: hoolai
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
