@@ -9,15 +9,15 @@ eureka:
     prefer-ip-address: true
 zuul:
   routes:
-    user: 
-      path: /api-user/**
-      url: http://192.168.150.158:6001/user
-    order: 
-      path: /api-order/**
-      url: http://192.168.150.158:6001/order
-    validatechannel: 
-      path: /api-validatechannel/**
-      url: http://192.168.150.158:6001/validatechannel
-    notify: 
-      path: /api-notify/**
-      url: http://192.168.150.158:6001/notify
+      user:
+          path: /api-user/**
+          serviceId: provider-user
+      order:
+          path: /api-order/**
+          url: provider-order
+      validatechannel:
+          path: /api-validatechannel/**
+          url: provider-validatechannel
+      notify:
+          path: /api-notify/**
+          url: provider-notify
