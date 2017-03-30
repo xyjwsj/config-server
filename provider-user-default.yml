@@ -1,5 +1,7 @@
 server:
   port: 8001
+  error:
+    path: /exception/error
 eureka:
   client:
     service-url:
