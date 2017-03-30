@@ -11,10 +11,10 @@ zuul:
   routes:
       user:
           path: /api-user/**
-          serviceId: api-user
+          serviceId: provider-user
       order:
           path: /api-order/**
-          url: api-order
+          url: provider-order
       validatechannel:
           path: /api-validatechannel/**
           url: provider-validatechannel
