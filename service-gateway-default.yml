@@ -13,10 +13,10 @@ zuul:
           serviceId: api-user
       order:
           path: /api-order/**
-          url: api-order
+          serviceId: api-order
       validatechannel:
           path: /api-validatechannel/**
-          url: provider-validatechannel
+          serviceId: provider-validatechannel
       notify:
           path: /api-notify/**
-          url: provider-notify
+          serviceId: provider-notify
