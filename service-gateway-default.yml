@@ -5,7 +5,6 @@ eureka:
     service-url:
       defaultZone: http://discovery-server:7001/eureka/
   instance:
-    hostname: discovery-server
     prefer-ip-address: true
 zuul:
   routes:
