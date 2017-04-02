@@ -5,7 +5,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://192.168.150.158:${server.port}/eureka
+      defaultZone: http://discovery-server:${server.port}/eureka
   instance:
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
