@@ -9,13 +9,6 @@ eureka:
   instance:
     prefer-ip-address: true
 spring:
-  application:
-    name: provider-user
-#  cloud:
-#    config:
-#      label: master
-#      uri: http://192.168.150.158:1111
-#      profile: default
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
