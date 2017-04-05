@@ -12,5 +12,3 @@ eureka:
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
-spring:
-  profiles: dev
