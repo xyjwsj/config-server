@@ -12,3 +12,24 @@ eureka:
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
+spring:
+  profiles: dev
+
+---
+
+server:
+  port: 8001
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.application.name}:${server.port}/eureka
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
+spring:
+  profiles: pro
