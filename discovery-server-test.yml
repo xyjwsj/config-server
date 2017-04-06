@@ -1,5 +1,5 @@
 server:
-  port: 7101
+  port: 7001
 eureka:
   client:
     register-with-eureka: false
