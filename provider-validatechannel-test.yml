@@ -1,0 +1,8 @@
+server:
+  port: 8101
+eureka:
+  client:
+    service-url:
+      defaultZone : http://discovery-server:7001/eureka/
+  instance:
+    prefer-ip-address: true

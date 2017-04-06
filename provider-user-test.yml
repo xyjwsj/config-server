@@ -1,0 +1,27 @@
+server:
+  port: 8001
+  error:
+    path: /exception/error
+eureka:
+  client:
+    service-url:
+      defaultZone : http://discovery-server:7001/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      max-lifetime: 1800000
+      maximum-pool-size: 20
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      minimum-idle: 10
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://db:3306/idea_database?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+mybatis:
+  type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
+  mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
