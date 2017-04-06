@@ -20,3 +20,30 @@ zuul:
       notify:
           path: /api-notify/**
           service-id: provider-notify
+spring:
+  profiles: test
+---
+server:
+  port: 80
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:7001/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+      user:
+          path: /api-user/**
+          service-id: api-user
+      order:
+          path: /api-order/**
+          service-id: api-order
+      validatechannel:
+          path: /api-validatechannel/**
+          service-id: provider-validatechannel
+      notify:
+          path: /api-notify/**
+          service-id: provider-notify
+spring:
+  profiles: pro
