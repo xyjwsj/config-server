@@ -1,3 +1,6 @@
+profiles:
+    active: test
+---
 server:
   port: 7101
 eureka:
