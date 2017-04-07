@@ -27,3 +27,4 @@ zuul:
     max-semaphores: 1000
   retryable: false
 hystrix.command.default.execution.timeout.enabled: false
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000
