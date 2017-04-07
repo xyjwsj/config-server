@@ -8,7 +8,7 @@ eureka:
   instance:
     prefer-ip-address: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000  ##暂时这样
-hystrix.command.default.execution.timeout.enabled: true
+hystrix.command.default.execution.timeout.enabled: false
 hystrix.threadpool.default.coreSize: 40 ##线程池核心线程数
 hystrix.threadpool.default.queueSizeRejectionThreshold: 20 ##排队线程数量阈值，默认为5
 hystrix.command.default.circuitBreaker.requestVolumeThreshold: 50 ##当在配置时间窗口内达到此数量的失败后，进行短路。默认20个
