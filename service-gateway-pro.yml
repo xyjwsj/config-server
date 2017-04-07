@@ -22,7 +22,7 @@ zuul:
           url: provider-notify
   host:
     max-total-connections: 100000
-    max-per-route-connections: 10000
+    max-per-route-connections: 1000
   semaphore:
     max-semaphores: 1000
   retryable: true
