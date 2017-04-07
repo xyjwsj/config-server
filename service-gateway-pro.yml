@@ -25,4 +25,5 @@ zuul:
     max-per-route-connections: 1000
   semaphore:
     max-semaphores: 1000
-  retryable: true
+  retryable: false
+hystrix.command.default.execution.timeout.enabled: false
