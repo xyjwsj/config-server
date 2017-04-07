@@ -10,13 +10,18 @@ zuul:
   routes:
       user:
           path: /api-user/**
-          service-id: api-user
+          serviceId: provider-user
       order:
           path: /api-order/**
-          service-id: api-order
+          url: provider-order
       validatechannel:
           path: /api-validatechannel/**
-          service-id: provider-validatechannel
+          url: provider-validatechannel
       notify:
           path: /api-notify/**
-          service-id: provider-notify
+          url: provider-notify
+  host:
+    max-total-connections: 10000
+    max-per-route-connections: 100000
+  semaphore:
+    max-semaphores: 1000
