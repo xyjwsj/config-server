@@ -9,6 +9,6 @@ eureka:
     prefer-ip-address: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000  ##暂时这样
 hystrix.command.default.execution.timeout.enabled: true
-hystrix.threadpool.default.coreSize: 30
-hystrix.threadpool.default.queueSizeRejectionThreshold: 20
+hystrix.threadpool.default.coreSize: 40
+hystrix.threadpool.default.queueSizeRejectionThreshold: 100
 hystrix.command.default.circuitBreaker.requestVolumeThreshold: 100
