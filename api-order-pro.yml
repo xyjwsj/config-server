@@ -8,6 +8,6 @@ eureka:
   instance:
     prefer-ip-address: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000  ##暂时这样
-ribbon:
-  ReadTimeout: 30000
-  ConnectTimeout: 15000
+feign:
+  httpclient:
+    enabled: true
