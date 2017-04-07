@@ -8,8 +8,3 @@ eureka:
   instance:
     prefer-ip-address: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000  ##暂时这样
-feign:
-  compression:
-    request:
-      mime-types: text/xml,application/xml,application/json
-      min-request-size: 2048
