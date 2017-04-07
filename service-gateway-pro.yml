@@ -9,11 +9,11 @@ eureka:
 zuul:
   routes:
       user:
-          path: /api-user/**
-          serviceId: provider-user
+          path: /api/user/**
+          serviceId: api-user
       order:
-          path: /api-order/**
-          url: provider-order
+          path: /api/order/**
+          url: api-order
       validatechannel:
           path: /api-validatechannel/**
           url: provider-validatechannel
