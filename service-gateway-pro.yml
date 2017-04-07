@@ -21,8 +21,8 @@ zuul:
           path: /api-notify/**
           url: provider-notify
   host:
-    max-total-connections: 100000
-    max-per-route-connections: 10000
+    max-total-connections: 10000
+    max-per-route-connections: 100
   semaphore:
     max-semaphores: 1000
   retryable: true
