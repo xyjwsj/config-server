@@ -27,4 +27,4 @@ zuul:
     max-per-route-connections: 10000
   semaphore:
     max-semaphores: 1000
-  retryable: true
+  #retryable: true
