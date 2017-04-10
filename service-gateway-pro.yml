@@ -10,10 +10,10 @@ zuul:
   routes:
       user:
           path: /api/user/**
-          serviceId: api-user
+          serviceId: provider-user
       order:
           path: /api/order/**
-          serviceId: api-order
+          serviceId: provider-order
       validatechannel:
           path: /api-validatechannel/**
           url: provider-validatechannel
@@ -26,5 +26,6 @@ zuul:
   semaphore:
     max-semaphores: 1000
   retryable: false
+  ignored-patterns: /**/privateApi/**
 hystrix.command.default.execution.timeout.enabled: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000
