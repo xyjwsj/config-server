@@ -10,13 +10,14 @@ zuul:
   routes:
       user:
           path: /api-user/**
-          service-id: api-user
+          service-id: provider-user
       order:
           path: /api-order/**
-          service-id: api-order
+          service-id: provider-order
       validatechannel:
           path: /api-validatechannel/**
           service-id: provider-validatechannel
       notify:
           path: /api-notify/**
           service-id: provider-notify
+  ignored-patterns: /**/privateApi/**
