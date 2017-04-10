@@ -1,8 +1,5 @@
 server:
   port: 9001
-  tomcat:
-    max-threads: 128
-    min-spare-threads: 64
 eureka:
   client:
     service-url:
