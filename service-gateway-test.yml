@@ -1,5 +1,8 @@
 server:
   port: 9001
+  tomcat:
+    max-threads: 128
+    min-spare-threads: 64
 eureka:
   client:
     service-url:
@@ -10,14 +13,29 @@ zuul:
   routes:
       user:
           path: /api/user/**
-          service-id: provider-user
+          serviceId: provider-user
       order:
           path: /api/order/**
-          service-id: provider-order
+          serviceId: provider-order
       validatechannel:
-          path: /api/validatechannel/**
-          service-id: provider-validatechannel
+          path: /api-validatechannel/**
+          url: provider-validatechannel
       notify:
-          path: /api/notify/**
-          service-id: provider-notify
+          path: /api-notify/**
+          url: provider-notify
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+    max-total-connections: 100000
+    max-per-route-connections: 10000
+  semaphore:
+    max-semaphores: 1000
+  retryable: true
   ignored-patterns: /**/privateApi/**
+security:
+  oauth2:
+    client:
+      client-id: yvz5o319oolklggq
+      client-secret: 7g8trcvehjp4bi52
+      access-token-uri: http://192.168.150.158:6001/oauth/token
+      scope: openid
