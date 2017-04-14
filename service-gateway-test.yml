@@ -37,6 +37,6 @@ security:
     client:
       client-id: yvz5o319oolklggq
       client-secret: 7g8trcvehjp4bi52
-      access-token-uri: http://192.168.150.158:6001/oauth/token
+      access-token-uri: http://yvz5o319oolklggq:7g8trcvehjp4bi52@192.168.150.158:6001/oauth/token
       scope: openid
       grant-type: password
