@@ -1,0 +1,12 @@
+server:
+  port: 6001
+security:
+  user:
+    password: barsecret
+    name: bar
+  oauth2:
+    client:
+      client-id: yvz5o319oolklggq
+      client-secret: 7g8trcvehjp4bi52
+      authorized-grant-types: refresh_token,password
+      scope: openid
