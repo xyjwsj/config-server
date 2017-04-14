@@ -10,9 +10,3 @@ security:
       client-secret: 7g8trcvehjp4bi52
       authorized-grant-types: refresh_token,password
       scope: openid
-eureka:
-  client:
-    service-url:
-      defaultZone: http://192.168.150.158:7001/eureka/
-  instance:
-    prefer-ip-address: true
