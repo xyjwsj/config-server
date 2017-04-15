@@ -35,4 +35,4 @@ zuul:
 security:
   oauth2:
     resource:
-      user-info-uri: http://192.168.150.158:6001/oauth/token
+      user-info-uri: http://yvz5o319oolklggq:7g8trcvehjp4bi52@192.168.150.158:6001/oauth/token
