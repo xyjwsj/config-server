@@ -18,10 +18,10 @@ zuul:
           path: /api/order/**
           serviceId: provider-order
       validatechannel:
-          path: /api-validatechannel/**
+          path: /api/validatechannel/**
           url: provider-validatechannel
       notify:
-          path: /api-notify/**
+          path: /api/notify/**
           url: provider-notify
   host:
     socket-timeout-millis: 60000
@@ -36,3 +36,4 @@ security:
   oauth2:
     resource:
       user-info-uri: http://192.168.150.158:6001/user
+  ignored: /api/public/**
