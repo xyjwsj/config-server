@@ -23,6 +23,9 @@ zuul:
       notify:
           path: /api/notify/**
           url: provider-notify
+      public:
+          path: /api/public/**
+           serviceId: provider-user
   host:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
