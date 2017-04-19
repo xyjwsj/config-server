@@ -25,13 +25,13 @@ zuul:
           url: provider-notify
       public:
           path: /api/public/**
-          #serviceId: provider-user
-          #stripPrefix: false
-          url: http://192.168.150.158:6001/oauth/token
+          serviceId: provider-user
+          stripPrefix: false
       oauth:
           path: /oauth/token/**
-          serviceId: security-oauth
-          stripPrefix: false
+          #serviceId: security-oauth
+          #stripPrefix: false
+          url: http://192.168.150.158:6001/oauth/token
   host:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
