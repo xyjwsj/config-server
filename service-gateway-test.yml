@@ -27,6 +27,10 @@ zuul:
           path: /api/public/**
           serviceId: provider-user
           stripPrefix: false
+      oauth:
+          path: /oauth/token
+          serviceId: security-oauth
+          stripPrefix: false
   host:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
@@ -40,4 +44,4 @@ security:
   oauth2:
     resource:
       user-info-uri: http://192.168.150.158:6001/user
-  ignored: /api/public/**
+  ignored: /api/public/**, /oauth/token
