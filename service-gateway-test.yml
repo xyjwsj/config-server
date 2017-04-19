@@ -25,8 +25,9 @@ zuul:
           url: provider-notify
       public:
           path: /api/public/**
-          serviceId: provider-user
-          stripPrefix: false
+          #serviceId: provider-user
+          #stripPrefix: false
+          url: http://192.168.150.158:6001/oauth/token
       oauth:
           path: /oauth/token/**
           serviceId: security-oauth
