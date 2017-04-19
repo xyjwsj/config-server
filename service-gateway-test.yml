@@ -44,4 +44,4 @@ security:
   oauth2:
     resource:
       user-info-uri: http://192.168.150.158:6001/user
-  ignored: /api/public/**, /oauth/token
+  ignored: /api/public/**, /oauth/token/**
