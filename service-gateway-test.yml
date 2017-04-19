@@ -28,7 +28,7 @@ zuul:
           serviceId: provider-user
           stripPrefix: false
       oauth:
-          path: /oauth/token
+          path: /oauth/token/**
           serviceId: security-oauth
           stripPrefix: false
   host:
