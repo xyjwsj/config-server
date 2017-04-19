@@ -27,7 +27,7 @@ zuul:
           path: /api/public/**
           serviceId: provider-user
           stripPrefix: false
-      oauth:
+      hloauth:
           path: /oauth/token/**
           serviceId: security-oauth
           stripPrefix: false
