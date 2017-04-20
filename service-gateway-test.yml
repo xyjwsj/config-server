@@ -46,4 +46,5 @@ security:
     resource:
       user-info-uri: http://192.168.150.158:6001/user
   ignored: /api/public/**,/oauth/token/**
-debug: true
+logging:
+  level: debug
