@@ -24,7 +24,7 @@ zuul:
           path: /api/notify/**
           url: provider-notify
       public:
-          path: /api/public/**
+          path: /api/public/user/**
           serviceId: provider-user
           stripPrefix: false
       #hloauth:
