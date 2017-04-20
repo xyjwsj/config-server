@@ -40,7 +40,7 @@ zuul:
   semaphore:
     max-semaphores: 1000
   retryable: true
-  ignored-patterns: /**/privateApi/**
+  ignored-patterns: /**/private/api/**
 security:
   oauth2:
     resource:
