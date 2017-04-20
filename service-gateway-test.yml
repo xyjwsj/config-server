@@ -29,9 +29,9 @@ zuul:
           stripPrefix: false
       hloauth:
           path: /oauth/token/**
-          serviceId: security-oauth
-          stripPrefix: false
-          #url: http://192.168.150.158:6001/oauth/token
+          #serviceId: security-oauth
+          #stripPrefix: false
+          url: http://192.168.150.158:6001/oauth/token
   host:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
