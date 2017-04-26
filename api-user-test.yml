@@ -5,6 +5,6 @@ eureka:
     service-url:
       defaultZone : http://192.168.150.158:7001/eureka/
     eureka-server-read-timeout-seconds: 30000
-  instance:
-    prefer-ip-address: true
+  #instance:
+   # prefer-ip-address: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000  ##暂时这样
