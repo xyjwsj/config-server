@@ -1,0 +1,25 @@
+server:
+  port: 11000
+  error:
+    path: /exception/error
+eureka:
+  client:
+    service-url:
+      defaultZone : http://192.168.150.158:7001/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  task:
+    pool:
+      corePoolSize: 10
+      maxPoolSize: 30
+      keepAliveSeconds: 10000
+      queueCapacity: 30
+hoolai:
+  mail:
+    smtp:
+      auth: true
+      host: smtp.gmail.com
+      port: 587
+      connectionTimeout: 3000
+      timeout: 3000
