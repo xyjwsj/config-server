@@ -8,6 +8,12 @@ eureka:
 #    hostname: discovery-server
 #    prefer-ip-address: true
 spring:
+  task:
+    pool:
+      corePoolSize: 10
+      maxPoolSize: 30
+      keepAliveSeconds: 10000
+      queueCapacity: 30
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
