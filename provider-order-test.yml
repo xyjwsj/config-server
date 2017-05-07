@@ -6,7 +6,7 @@ eureka:
       defaultZone : http://192.168.150.158:7001/eureka/
  # instance:
  #   prefer-ip-address: true
- spring:
+spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
