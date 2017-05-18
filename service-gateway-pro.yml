@@ -1,5 +1,8 @@
 server:
-  port: 9001
+  port: ${run_port}
+  tomcat:
+    max-threads: 128
+    min-spare-threads: 64
 eureka:
   client:
     service-url:
@@ -15,17 +18,33 @@ zuul:
           path: /api/order/**
           serviceId: provider-order
       validatechannel:
-          path: /api-validatechannel/**
+          path: /api/validatechannel/**
           url: provider-validatechannel
       notify:
-          path: /api-notify/**
+          path: /api/notify/**
           url: provider-notify
+      public:
+          path: /api/public/user/**
+          serviceId: provider-user
+          stripPrefix: false
+      #hloauth:
+          #path: /oauth/**
+          #serviceId: security-oauth
+          #stripPrefix: false
+          #url: http://192.168.150.158:6001/oauth/token
   host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
     max-total-connections: 100000
-    max-per-route-connections: 1000
+    max-per-route-connections: 10000
   semaphore:
     max-semaphores: 1000
-  retryable: false
-  ignored-patterns: /**/privateApi/**
-hystrix.command.default.execution.timeout.enabled: true
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000
+  retryable: true
+  ignored-patterns: /**/private/api/**
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://provider-oauth:6001/user
+  ignored: /api/public/**
+logging:
+  level: debug

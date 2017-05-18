@@ -1,5 +1,5 @@
 server:
-  port: 8101
+  port: ${run_port}
 eureka:
   client:
     service-url:

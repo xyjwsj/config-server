@@ -19,9 +19,10 @@ spring:
       idle-timeout: 600000
       minimum-idle: 10
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://db:3306/access_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://db:3306/foreign_code?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
     password: ${db_password}
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
 mybatis:
-  type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
-  mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
+  type-aliases-package: com.hoolai.access.foreign.provider.code.dao.mybatis.vo
+  mapper-locations: classpath:com/hoolai/access/foreign/provider/code/dao/mybatis/mapper/*Mapper.xml
