@@ -1,5 +1,7 @@
 server:
   port: 6001
+  error:
+      path: /oauth/error
 security:
   user:
     password: barsecret
