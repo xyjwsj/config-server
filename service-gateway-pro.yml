@@ -48,3 +48,4 @@ security:
   ignored: /api/public/**
 logging:
   level: debug
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
