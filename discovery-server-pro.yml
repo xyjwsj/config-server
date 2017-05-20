@@ -9,7 +9,7 @@ eureka:
   instance:
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    hostname: ${balance_name}
+    hostname: ${discovery_host}
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
