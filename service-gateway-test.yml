@@ -45,12 +45,12 @@ security:
   oauth2:
     resource:
       user-info-uri: http://192.168.150.158:6001/user
-    client:
-      access-token-uri: http://192.168.150.158:6001/oauth/token
-      user-authorization-uri: http://192.168.150.158:6001/oauth/authorize
-      client-secret: 7g8trcvehjp4bi52
-      client-id: yvz5o319oolklggq
-      scope: refresh_token,password
+    #client:
+    #  access-token-uri: http://192.168.150.158:6001/oauth/token
+    #  user-authorization-uri: http://192.168.150.158:6001/oauth/authorize
+    #  client-secret: 7g8trcvehjp4bi52
+    #  client-id: yvz5o319oolklggq
+    #  scope: refresh_token,password
   ignored: /api/public/**
 logging:
   level: debug
