@@ -2,7 +2,7 @@ server:
   port: ${run_port}
 eureka:
   client:
-    register-with-eureka: true
+    register-with-eureka: false
     fetch-registry: false
     service-url:
       defaultZone: ${discovery_url}
