@@ -9,7 +9,7 @@ eureka:
       #defaultZone: http://${spring.application.name}:${server.port}/eureka/
       defaultZone: http://d-slaver:7002/eureka/
   instance:
-    hostname: ${discovery_host}
+    hostname: d-master
     lease-expiration-duration-in-seconds: 30 
     lease-renewal-interval-in-seconds: 10
     metadata-map:
