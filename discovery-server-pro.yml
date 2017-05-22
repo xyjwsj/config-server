@@ -2,14 +2,14 @@ server:
   port: ${run_port}
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     fetch-registry: false
     service-url:
       defaultZone: ${discovery_url}
   instance:
     hostname: ${discovery_host}
-    #metadata-map:
-      #instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
       #instanceId: {eureka.instance.hostname}:${server.port}/eureka
   server:
     enable-self-preservation: false
