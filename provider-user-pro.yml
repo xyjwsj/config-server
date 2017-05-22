@@ -5,7 +5,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone : http://discovery-server:7001/eureka/
+      defaultZone : ${eureka_url}
   instance:
     prefer-ip-address: true
 spring:
