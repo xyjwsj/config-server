@@ -9,7 +9,7 @@ eureka:
       #defaultZone: http://${spring.application.name}:${server.port}/eureka/
       #defaultZone: http://d-slaver:7002/eureka/
   instance:
-    hostname: d-slaver
+    hostname: master
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
       #instanceId: {eureka.instance.hostname}:${server.port}/eureka
