@@ -5,7 +5,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://d-slaver:7002/eureka
+      defaultZone: ${discovery_url}
   instance:
     hostname: ${discovery_host}
     metadata-map:
