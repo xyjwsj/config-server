@@ -2,14 +2,14 @@ server:
   port: ${run_port}
 eureka:
   client:
-    #register-with-eureka: false
-    #fetch-registry: false
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
       defaultZone: ${discovery_url}
   instance:
-    #metadata-map:
-    #  instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     hostname: ${discovery_host}
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   server:
-    enable-self-preservation: false
+    #enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
