@@ -2,7 +2,7 @@ server:
   port: ${run_port}
 eureka:
   instance:
-    hostname: ${discovery_host}
+    #hostname: ${discovery_host}
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
       #instanceId: {eureka.instance.hostname}:${server.port}/eureka
