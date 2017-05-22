@@ -11,5 +11,5 @@ eureka:
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   server:
-    #enable-self-preservation: false
+    enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
