@@ -10,6 +10,8 @@ eureka:
       defaultZone: http://d-master:7001/eureka/
   instance:
     hostname: ${discovery_host}
+    lease-expiration-duration-in-seconds: 30 
+    lease-renewal-interval-in-seconds: 10
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
       #instanceId: {eureka.instance.hostname}:${server.port}/eureka
