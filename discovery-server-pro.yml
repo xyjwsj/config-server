@@ -1,6 +1,11 @@
 server:
   port: ${run_port}
 eureka:
+  instance:
+    hostname: ${discovery_host}
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      #instanceId: {eureka.instance.hostname}:${server.port}/eureka
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -8,11 +13,6 @@ eureka:
       defaultZone: ${discovery_url}
       #defaultZone: http://${spring.application.name}:${server.port}/eureka/
       #defaultZone: http://d-slaver:7002/eureka/
-  instance:
-    hostname: ${discovery_host}
-    metadata-map:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-      #instanceId: {eureka.instance.hostname}:${server.port}/eureka
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
