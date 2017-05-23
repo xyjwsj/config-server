@@ -8,6 +8,7 @@ eureka:
       defaultZone : http://discovery-server:7001/eureka/
   instance:
     prefer-ip-address: true
+    ip-address: ${host_ip}
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
