@@ -10,7 +10,7 @@ eureka:
     prefer-ip-address: true
     ip-address: ${host_ip}
     lease-renewal-interval-in-seconds: 2
-    lease-expiration-duration-in-seconds: 6
+    lease-expiration-duration-in-seconds: 3
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
