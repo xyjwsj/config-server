@@ -2,8 +2,8 @@ server:
   port: ${run_port}
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: ${discovery_url}
       #defaultZone: http://${spring.application.name}:${server.port}/eureka/
