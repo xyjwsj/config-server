@@ -15,11 +15,11 @@ spring:
         binder:
           brokers: 192.168.150.158:9092
           zk-nodes: 192.168.150.158:2181
-      #bindings:
-      #  input:
-      #    destination: provider-order
-      #  output:
-      #    destination: provider-appinfo
+      bindings:
+        input:
+          destination: provider-order
+        output:
+          destination: provider-appinfo
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
