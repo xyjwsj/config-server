@@ -17,6 +17,15 @@ hoolai:
       connectionTimeout: 3000
       timeout: 3000
 spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.150.158:9092
+          zk-nodes: 192.168.150.158:2181
+      bindings:
+        input:
+          destination: provider-appinfo
   task:
     pool:
       corePoolSize: 10
