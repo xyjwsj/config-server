@@ -33,4 +33,4 @@ logging:
   level: info
   pattern:
     file: %d{yyyy-MM-dd HH:mm:ss}
-  path: /var/logs
+  path: /var/log
