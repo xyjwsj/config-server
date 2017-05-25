@@ -1,5 +1,5 @@
 server:
-  port: 10300
+  port: 10400
 eureka:
   client:
     service-url:
