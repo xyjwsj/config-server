@@ -1,0 +1,9 @@
+server:
+  port: 10300
+eureka:
+  client:
+    service-url:
+      defaultZone : http://192.168.150.158:7001/eureka/
+  instance:
+    hostname: discovery-server
+    prefer-ip-address: true
