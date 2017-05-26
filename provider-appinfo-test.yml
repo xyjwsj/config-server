@@ -35,7 +35,7 @@ spring:
     password: hoolai
   zipkin:
     base-url: http://zipkin-server:10400
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 100000
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.appinfo.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/appinfo/dao/mybatis/mapper/*Mapper.xml

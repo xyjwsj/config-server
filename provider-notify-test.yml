@@ -27,7 +27,7 @@ spring:
     url: jdbc:mysql://192.168.150.158:3306/foreign_notify?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 100000
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.notify.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/notify/dao/mybatis/mapper/*Mapper.xml
