@@ -45,6 +45,8 @@ spring:
     url: jdbc:mysql://192.168.150.158:3306/foreign_message?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
+  zipkin:
+    base-url: http://zipkin-server:10400
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 100000
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.message.dao.mybatis.vo
