@@ -29,3 +29,8 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
+logging:
+  level: info
+  pattern:
+    file: %d{yyyy-MM-dd HH:mm:ss}.log
+  path: /var/log
