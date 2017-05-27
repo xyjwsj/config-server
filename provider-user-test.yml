@@ -30,4 +30,4 @@ mybatis:
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
 logging:
   level: info
-  file: /var/logs/provider_user_%d{HH: mm:ss.SSS}.log
+  file: /var/logs/provider_user.log
