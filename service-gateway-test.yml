@@ -27,6 +27,10 @@ zuul:
           path: /api/public/user/**
           serviceId: provider-user
           stripPrefix: false
+      publicOrder:
+          path: /api/public/pay/**
+          serviceId: provider-order
+          stripPrefix: false
       #hloauth:
           #path: /oauth/**
           #serviceId: security-oauth
