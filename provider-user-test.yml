@@ -17,6 +17,20 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
+hystrix:
+  threadpool:
+    security-oaut:
+      coreSize: 40
+      maximumSiz: 64
+    provider-code:
+      coreSize: 30
+      maximumSiz: 56
+    provider-appinfo:
+      coreSize: 40
+      maximumSiz: 64
+    security-email:
+      coreSize: 30
+      maximumSiz: 56
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
