@@ -28,7 +28,7 @@ hystrix:
     provider-appinfo:
       coreSize: 40
       maximumSiz: 64
-    security-email:
+    provider-email:
       coreSize: 30
       maximumSiz: 56
 spring:
