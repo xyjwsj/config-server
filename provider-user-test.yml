@@ -36,6 +36,9 @@ spring:
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
+feign:
+  httpclient:
+    enable: true
 logging:
   level: info
   file: /var/logs/provider_user.log
