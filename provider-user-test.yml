@@ -19,7 +19,7 @@ hystrix:
             timeoutInMilliseconds: 60000
 hystrix:
   threadpool:
-    security-oaut:
+    security-oauth:
       coreSize: 40
       maximumSiz: 64
     provider-code:
