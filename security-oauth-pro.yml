@@ -17,7 +17,15 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: ${host_ip}
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
