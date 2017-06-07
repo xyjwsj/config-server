@@ -21,16 +21,16 @@ hystrix:
   threadpool:
     security-oauth:
       coreSize: 40
-      maximumSiz: 64
+      maximumSize: 64
     provider-code:
       coreSize: 30
-      maximumSiz: 56
+      maximumSize: 56
     provider-appinfo:
       coreSize: 40
-      maximumSiz: 64
+      maximumSize: 64
     provider-email:
       coreSize: 30
-      maximumSiz: 56
+      maximumSize: 56
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
