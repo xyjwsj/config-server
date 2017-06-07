@@ -18,7 +18,15 @@ eureka:
       defaultZone : http://192.168.150.158:7001/eureka/
 #  instance:
 #    prefer-ip-address: true
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 100000
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
