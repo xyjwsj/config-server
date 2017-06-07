@@ -17,20 +17,6 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
-hystrix:
-  threadpool:
-    security-oauth:
-      coreSize: 40
-      maximumSize: 64
-    provider-code:
-      coreSize: 30
-      maximumSize: 56
-    provider-appinfo:
-      coreSize: 40
-      maximumSize: 64
-    provider-email:
-      coreSize: 30
-      maximumSize: 56
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -50,9 +36,6 @@ spring:
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
-feign:
-  httpclient:
-    enable: true
 logging:
   level: info
   file: /var/logs/provider_user.log
