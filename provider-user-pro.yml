@@ -31,7 +31,7 @@ hystrix:
   threadpool:
     default:
       coreSize: 220 #缺省为10
-      maxQueueSize: 150
+      maxQueueSize: 50
       queueSizeRejectionThreshold: 50
   command:
     default:
