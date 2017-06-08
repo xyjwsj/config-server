@@ -37,9 +37,9 @@ zuul:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
     max-total-connections: 200
-    max-per-route-connections: 10
+    max-per-route-connections: 100
   semaphore:
-    max-semaphores: 128
+    max-semaphores: 256
   retryable: true
   ignored-patterns: /**/private/api/**
 security:
