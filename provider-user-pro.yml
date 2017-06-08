@@ -28,6 +28,9 @@ spring:
   zipkin:
     base-url: http://zipkin-server:10400
 hystrix:
+  threadpool:
+    default:
+      coreSize: 200 #缺省为10
   command:
     default:
       execution:
