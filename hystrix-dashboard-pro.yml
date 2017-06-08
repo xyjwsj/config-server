@@ -1,6 +1,6 @@
 server:
   port: ${run_port}
-  context-path: /hystrixdashboard
+  context-path: /hystrix
 spring:
   application:
     name: hystrix-dashboard
