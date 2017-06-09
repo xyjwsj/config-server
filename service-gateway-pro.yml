@@ -1,6 +1,7 @@
 server:
   port: ${run_port}
   tomcat:
+    accept-count: 1000
     max-threads: 2000
     min-spare-threads: 1000
 eureka:
