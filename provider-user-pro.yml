@@ -2,6 +2,10 @@ server:
   port: ${run_port}
   error:
     path: /exception/error
+  tomcat:
+    accept-count: 1000
+    max-threads: 2000
+    min-spare-threads: 1000
 eureka:
   client:
     service-url:
