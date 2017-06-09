@@ -1,8 +1,8 @@
 server:
   port: ${run_port}
   tomcat:
-    max-threads: 128
-    min-spare-threads: 64
+    max-threads: 2000
+    min-spare-threads: 1000
 eureka:
   client:
     service-url:
