@@ -13,8 +13,8 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: ${host_ip}
-    lease-renewal-interval-in-seconds: 5
-    lease-expiration-duration-in-seconds: 10
+   # lease-renewal-interval-in-seconds: 5
+   # lease-expiration-duration-in-seconds: 10
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -32,11 +32,11 @@ spring:
   zipkin:
     base-url: http://zipkin-server:10400
 hystrix:
-  threadpool:
-    default:
-      coreSize: 200 #缺省为10
-      maxQueueSize: 80
-      queueSizeRejectionThreshold: 50
+  #threadpool:
+  #  default:
+  #    coreSize: 200 #缺省为10
+  #    maxQueueSize: 80
+  #    queueSizeRejectionThreshold: 50
   command:
     default:
       execution:
