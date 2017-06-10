@@ -1,9 +1,9 @@
 server:
   port: ${run_port}
-eureka:
-  client:
-    service-url:
-      defaultZone : ${eureka_url}
-  instance:
-    prefer-ip-address: true
-    ip-address: ${host_ip}
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone : ${eureka_url}
+#  instance:
+#    prefer-ip-address: true
+#    ip-address: ${host_ip}
