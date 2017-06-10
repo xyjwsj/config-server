@@ -29,22 +29,22 @@ spring:
     url: jdbc:mysql://db:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
     password: ${db_password}
-  zipkin:
-    base-url: http://zipkin-server:10400
-hystrix:
+  #zipkin:
+  #  base-url: http://zipkin-server:10400
+#hystrix:
   #threadpool:
   #  default:
   #    coreSize: 200 #缺省为10
   #    maxQueueSize: 80
   #    queueSizeRejectionThreshold: 50
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
+ # command:
+ #   default:
+ #     execution:
+ #       timeout:
+ #         enabled: true
+ #       isolation:
+ #         thread:
+ #           timeoutInMilliseconds: 60000
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
