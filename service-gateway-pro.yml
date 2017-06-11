@@ -25,9 +25,9 @@ zuul:
       notify:
           path: /api/notify/**
           url: provider-notify
-      public:
-          path: /api/public/**
-          serviceId: provider-user
+      #public:
+          #path: /api/public/**
+          #serviceId: provider-user
           #stripPrefix: false
       #hloauth:
           #path: /oauth/**
@@ -47,7 +47,7 @@ security:
   oauth2:
     resource:
       user-info-uri: http://provider-oauth:6001/user
-  ignored: /api/public/**
+  ignored: /api/*/public/**
 logging:
   level: debug
 hystrix:
