@@ -9,6 +9,11 @@ eureka:
   #instance:
   #  prefer-ip-address: true
 hystrix:
+  threadpool:
+    default:
+      coreSize: 100 #缺省为10
+      maxQueueSize: 80
+      queueSizeRejectionThreshold: 50
   command:
     default:
       execution:
