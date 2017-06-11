@@ -2,10 +2,9 @@ server:
   port: ${run_port}
   error:
     path: /exception/error
-  #tomcat:
-  #  accept-count: 1000
-  #  max-threads: 2000
-  #  min-spare-threads: 1000
+  tomcat:
+    max-threads: 2000
+    min-spare-threads: 1000
 eureka:
   client:
     service-url:
@@ -13,8 +12,8 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: ${host_ip}
-   # lease-renewal-interval-in-seconds: 5
-   # lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -29,22 +28,22 @@ spring:
     url: jdbc:mysql://db:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
     password: ${db_password}
-  #zipkin:
-  #  base-url: http://zipkin-server:10400
-#hystrix:
-  #threadpool:
-  #  default:
-  #    coreSize: 200 #缺省为10
-  #    maxQueueSize: 80
-  #    queueSizeRejectionThreshold: 50
- # command:
- #   default:
- #     execution:
- #       timeout:
- #         enabled: true
- #       isolation:
- #         thread:
- #           timeoutInMilliseconds: 60000
+  zipkin:
+    base-url: http://zipkin-server:10400
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200 #缺省为10
+      maxQueueSize: 80
+      queueSizeRejectionThreshold: 50
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
