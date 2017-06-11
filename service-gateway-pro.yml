@@ -25,10 +25,10 @@ zuul:
       notify:
           path: /api/notify/**
           url: provider-notify
-      #public:
-          #path: /api/public/**
-          #serviceId: provider-user
-          #stripPrefix: false
+      public:
+          path: /api/public/user/**
+          serviceId: provider-user
+          stripPrefix: false
       #hloauth:
           #path: /oauth/**
           #serviceId: security-oauth
