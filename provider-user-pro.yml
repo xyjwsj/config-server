@@ -37,9 +37,9 @@ spring:
 hystrix:
   threadpool:
     default:
-  #    coreSize: 100 #缺省为10
-  #    maxQueueSize: 80
-  #    queueSizeRejectionThreshold: 50
+      coreSize: 50 #缺省为10
+      maxQueueSize: 80
+      queueSizeRejectionThreshold: 1000
   command:
     default:
       execution:
