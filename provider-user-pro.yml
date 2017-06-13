@@ -23,8 +23,8 @@ spring:
 #      minimum-idle: 20
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.150.158:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: root
-    password: hoolai
+    username: ${db_username}
+    password: ${db_password}
     initialSize: 20
     minIdle: 20
     maxActive: 64
