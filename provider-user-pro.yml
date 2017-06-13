@@ -31,10 +31,6 @@ spring:
     maxWait: 800
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
     poolPreparedStatements: false
     maxPoolPreparedStatementPerConnectionSize: -1
   zipkin:
