@@ -2,9 +2,6 @@ server:
   port: ${run_port}
   error:
     path: /exception/error
-  #tomcat:
-  #  max-threads: 2000
-  #  min-spare-threads: 1000
 eureka:
   client:
     service-url:
@@ -16,31 +13,43 @@ eureka:
     lease-expiration-duration-in-seconds: 10
 spring:
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      max-lifetime: 1800000
-      maximum-pool-size: 64
-      read-only: false
-      connection-timeout: 30000
-      idle-timeout: 600000
-      minimum-idle: 20
+    type: com.alibaba.druid.pool.DruidDataSource
+    #hikari:
+#      max-lifetime: 1800000
+#      maximum-pool-size: 64
+#      read-only: false
+#      connection-timeout: 30000
+#      idle-timeout: 600000
+#      minimum-idle: 20
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://db:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: ${db_username}
-    password: ${db_password}
+    url: jdbc:mysql://192.168.150.158:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+    initialSize: 20
+    minIdle: 20
+    maxActive: 64
+# 配置获取连接等待超时的时间
+    maxWait: 800
+# 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+# 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+#spring.datasource.validationQuery=SELECT 1 FROM DUAL
+    validationQuery: SELECT 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+# 打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: -1
   zipkin:
     base-url: http://zipkin-server:10400
 hystrix:
-  threadpool:
-    default:
-      coreSize: 100 #缺省为10
-      maxQueueSize: 80
-      queueSizeRejectionThreshold: 50
   command:
     default:
       execution:
         timeout:
-          enabled: true
+          enabled: false
         isolation:
           thread:
             timeoutInMilliseconds: 60000
