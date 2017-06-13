@@ -25,9 +25,6 @@ spring:
     url: jdbc:mysql://db:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
     password: ${db_password}
-    time-between-eviction-runs-millis: 300000
-    num-tests-per-eviction-run: 3
-    min-evictable-idle-time-millis: 3600000
   zipkin:
     base-url: http://zipkin-server:10400
 hystrix:
