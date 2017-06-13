@@ -20,7 +20,7 @@ spring:
       read-only: false
       connection-timeout: 30000
       idle-timeout: 600000
-      minimum-idle: 10
+      minimum-idle: 5
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://db:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
