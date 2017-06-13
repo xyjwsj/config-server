@@ -2,6 +2,10 @@ server:
   port: ${run_port}
   error:
     path: /exception/error
+  tomcat:
+    accept-count: 1000
+    max-threads: 2000
+    min-spare-threads: 1000
 eureka:
   client:
     service-url:
@@ -16,11 +20,11 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       max-lifetime: 1800000
-      maximum-pool-size: 20
+      maximum-pool-size: 64
       read-only: false
       connection-timeout: 30000
       idle-timeout: 600000
-      minimum-idle: 5
+      minimum-idle: 20
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://db:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
@@ -31,8 +35,8 @@ spring:
   zipkin:
     base-url: http://zipkin-server:10400
 hystrix:
-  #threadpool:
-  #  default:
+  threadpool:
+    default:
   #    coreSize: 100 #缺省为10
   #    maxQueueSize: 80
   #    queueSizeRejectionThreshold: 50
