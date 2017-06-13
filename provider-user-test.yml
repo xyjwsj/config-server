@@ -22,6 +22,11 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
