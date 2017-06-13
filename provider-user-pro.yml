@@ -13,27 +13,18 @@ eureka:
     lease-expiration-duration-in-seconds: 10
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    #hikari:
-#      max-lifetime: 1800000
-#      maximum-pool-size: 64
-#      read-only: false
-#      connection-timeout: 30000
-#      idle-timeout: 600000
-#      minimum-idle: 20
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      max-lifetime: 1800000
+      maximum-pool-size: 20
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      minimum-idle: 10
     driver-class-name: com.mysql.jdbc.Driver
-    #url: jdbc:mysql://db:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    url: jdbc:mysql://db:3306/foreign_user?characterEncoding=utf-8&connectTimeout=3000
+    url: jdbc:mysql://db:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
     password: ${db_password}
-    initialSize: 20
-    minIdle: 20
-    maxActive: 64
-    maxWait: 800
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    poolPreparedStatements: false
-    maxPoolPreparedStatementPerConnectionSize: -1
   zipkin:
     base-url: http://zipkin-server:10400
 hystrix:
