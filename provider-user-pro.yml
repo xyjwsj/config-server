@@ -40,6 +40,8 @@ hystrix:
       coreSize: 50 #缺省为10
       #maxQueueSize: 80
       queueSizeRejectionThreshold: 1000
+      active: 50
+      maxActive: 200
   command:
     default:
       execution:
