@@ -31,11 +31,11 @@ spring:
   zipkin:
     base-url: http://zipkin-server:10400
 hystrix:
-  #threadpool:
-    #default:
-      #coreSize: 50 #缺省为10
+  threadpool:
+    default:
+      coreSize: 50 #缺省为10
       #maxQueueSize: 80
-      #queueSizeRejectionThreshold: 1000
+      queueSizeRejectionThreshold: 100
       #active: 50
       #maxActive: 200
   command:
