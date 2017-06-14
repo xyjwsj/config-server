@@ -13,7 +13,7 @@ eureka:
     lease-expiration-duration-in-seconds: 10
 feign:
   httpclient:
-    enabled: true
+    enabled: false
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
