@@ -32,7 +32,7 @@ hystrix:
     #default:
       #coreSize: 20 #缺省为10
       #maxQueueSize: 80
-      queueSizeRejectionThreshold: 100
+      #queueSizeRejectionThreshold: 100
       #active: 50
       #maxActive: 200
   command:
