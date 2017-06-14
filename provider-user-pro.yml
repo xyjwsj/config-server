@@ -11,9 +11,6 @@ eureka:
     ip-address: ${host_ip}
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
-feign:
-  httpclient:
-    enabled: false
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
