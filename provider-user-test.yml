@@ -41,6 +41,12 @@ spring:
     url: jdbc:mysql://192.168.150.158:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.150.158:9092
+          zk-nodes: 192.168.150.158:2181
   zipkin:
     base-url: http://192.168.150.158:10400
 mybatis:
