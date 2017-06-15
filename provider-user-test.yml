@@ -54,5 +54,4 @@ mybatis:
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
 logging:
   level: info
-  file: /var/logs/provider_user.log
   config: logback-spring.xml
