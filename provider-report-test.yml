@@ -23,10 +23,12 @@ spring:
         bindings:
           report:
             destination: report_spring_stream
-            producer:
-              partitionCount: 1
+            consumer:
+              concurrency: 1
+              partitioned: false
           log:
             destination: log_spring_stream
-            producer:
-              partitionCount: 1
+            consumer:
+              concurrency: 1
+              partitioned: false
 service.host.ip: 192.168.150.158
