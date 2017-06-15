@@ -21,13 +21,13 @@ spring:
           brokers: 192.168.150.158:9092
           zk-nodes: 192.168.150.158:2181
         bindings:
-          hoolai_report_input:
-            destination: report_spring_stream
+          reportinput:
+            destination: report_stream
             consumer:
               concurrency: 1
               partitioned: false
-          hoolai_log_input:
-            destination: log_spring_stream
+          loginput:
+            destination: log_stream
             consumer:
               concurrency: 1
               partitioned: false
