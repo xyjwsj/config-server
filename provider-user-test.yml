@@ -48,11 +48,11 @@ spring:
           brokers: 192.168.150.158:9092
           zk-nodes: 192.168.150.158:2181
         bindings:
-          report:
+          report_output:
             destination: report_spring_stream
             producer:
               partitionCount: 1
-          log:
+          log_output:
             destination: log_spring_stream
             producer:
               partitionCount: 1
