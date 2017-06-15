@@ -20,4 +20,9 @@ spring:
         binder:
           brokers: 192.168.150.158:9092
           zk-nodes: 192.168.150.158:2181
+        bindings:
+          report:
+            destination: provider-report
+          log:
+            destination: provider-report
 service.host.ip: 192.168.150.158
