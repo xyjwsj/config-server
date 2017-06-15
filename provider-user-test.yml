@@ -48,11 +48,11 @@ spring:
           brokers: 192.168.150.158:9092
           zk-nodes: 192.168.150.158:2181
         bindings:
-          report_output:
+          hoolai_report_output:
             destination: report_spring_stream
             producer:
               partitionCount: 1
-          log_output:
+          hoolai_log_output:
             destination: log_spring_stream
             producer:
               partitionCount: 1
