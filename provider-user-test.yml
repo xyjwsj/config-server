@@ -47,6 +47,11 @@ spring:
         binder:
           brokers: 192.168.150.158:9092
           zk-nodes: 192.168.150.158:2181
+        bindings:
+          report:
+            destination: provider-report
+          log:
+            destination: provider-report
   zipkin:
     base-url: http://192.168.150.158:10400
 mybatis:
