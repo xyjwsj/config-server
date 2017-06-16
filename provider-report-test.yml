@@ -21,12 +21,12 @@ spring:
           brokers: 192.168.150.158:9092
           zk-nodes: 192.168.150.158:2181
         bindings:
-          reportinput:
+          report:
             destination: report_stream
             consumer:
               concurrency: 1
               partitioned: false
-          loginput:
+          log:
             destination: log_stream
             consumer:
               concurrency: 1
