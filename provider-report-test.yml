@@ -47,4 +47,6 @@ spring:
             consumer:
               concurrency: 1
               partitioned: false
+  zipkin:
+    base-url: http://192.168.150.158:10400
 service.host.ip: 192.168.150.158
