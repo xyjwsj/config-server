@@ -23,6 +23,9 @@ zuul:
       notify:
           path: /api/notify/**
           url: provider-notify
+      report:
+          path: /api/report/**
+          url: provider-report
       public:
           path: /api/public/user/**
           serviceId: provider-user
