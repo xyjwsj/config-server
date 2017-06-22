@@ -49,4 +49,9 @@ spring:
               partitioned: false
   zipkin:
     base-url: http://192.168.150.158:10400
+report:
+  configs:
+    bi:
+      id: 200
+      path: /test
 service.host.ip: 192.168.150.158
