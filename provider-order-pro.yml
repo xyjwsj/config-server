@@ -27,6 +27,21 @@ spring:
     url: jdbc:mysql://db:3306/foreign_order?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
     password: ${db_password}
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: ${host_ip}:9092
+          zk-nodes: ${host_ip}:2181
+        bindings:
+          report:
+            destination: report_stream
+            producer:
+              partitionCount: 1
+          log:
+            destination: log_stream
+            producer:
+              partitionCount: 1
   zipkin:
     base-url: http://zipkin-server:10400
 hystrix:
