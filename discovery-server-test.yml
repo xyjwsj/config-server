@@ -12,3 +12,7 @@ eureka:
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 5000
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
