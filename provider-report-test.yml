@@ -52,6 +52,6 @@ spring:
 report:
   configs:
     bi:
-      id: 200
+      id: 999
       path: /var/bi
 service.host.ip: 192.168.150.158
