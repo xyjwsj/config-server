@@ -6,7 +6,7 @@ eureka:
       defaultZone : http://192.168.150.158:7001/eureka/
   instance:
  #   prefer-ip-address: true
-    ip-address: http://192.168.150.158
+    ip-address: 192.168.150.158
 spring:
   cloud:
     stream:

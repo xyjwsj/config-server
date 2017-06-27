@@ -7,7 +7,7 @@ eureka:
   instance:
 #    hostname: discovery-server
 #    prefer-ip-address: true
-    ip-address: http://192.168.150.158
+    ip-address: 192.168.150.158
 spring:
   task:
     pool:
