@@ -1,5 +1,5 @@
 server:
-  port: ${run_port}
+  port: 10500
 eureka:
   client:
     service-url:
@@ -18,15 +18,18 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       max-lifetime: 1800000
-      maximum-pool-size: 20
+      maximum-pool-size: 32
       read-only: false
       connection-timeout: 30000
       idle-timeout: 600000
-      minimum-idle: 10
+      minimum-idle: 5
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://db:3306/foreign_order?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://db:3306/foreign_report?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
     password: ${db_password}
+    time-between-eviction-runs-millis: 300000
+    num-tests-per-eviction-run: 3
+    min-evictable-idle-time-millis: 3600000
   cloud:
     stream:
       kafka:
@@ -36,24 +39,19 @@ spring:
         bindings:
           report:
             destination: report_stream
-            producer:
-              partitionCount: 1
+            consumer:
+              concurrency: 1
+              partitioned: false
           log:
             destination: log_stream
-            producer:
-              partitionCount: 1
+            consumer:
+              concurrency: 1
+              partitioned: false
   zipkin:
     base-url: http://zipkin-server:10400
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
-mybatis:
-  type-aliases-package: com.hoolai.access.foreign.provider.order.dao.mybatis.vo
-  mapper-locations: classpath:com/hoolai/access/foreign/provider/order/dao/mybatis/mapper/*Mapper.xml
+report:
+  configs:
+    bi:
+      id: 200
+      path: /var/bi
 service.host.ip: ${host_ip}

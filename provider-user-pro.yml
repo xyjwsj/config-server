@@ -29,8 +29,8 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: ${host_ip}:9092
-          zk-nodes: ${host_ip}:2181
+          brokers: ${master_ip}:9092
+          zk-nodes: ${master_ip}:2181
         bindings:
           report:
             destination: report_stream
