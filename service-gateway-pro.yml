@@ -53,7 +53,8 @@ zuul:
 security:
   oauth2:
     resource:
-      user-info-uri: http://security-oauth:6001/user
+      loadBalanced: true
+      user-info-uri: http://security-oauth/user
   ignored: /api/public/**
 logging:
   level: debug
