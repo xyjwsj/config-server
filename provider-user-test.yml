@@ -5,10 +5,10 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone : http://192.168.150.158:7001/eureka/
+      defaultZone : http://192.168.1.197:7001/eureka/
   instance:
     prefer-ip-address: true
-    ip-address: 192.168.150.158
+    ip-address: 192.168.1.197
 hystrix:
   threadpool:
     default:
@@ -46,8 +46,8 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: 192.168.150.158:9092
-          zk-nodes: 192.168.150.158:2181
+          brokers: 192.168.1.197:9092
+          zk-nodes: 192.168.1.197:2181
         bindings:
           report:
             destination: report_stream

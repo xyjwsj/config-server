@@ -6,7 +6,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.150.158:7001/eureka/
+      defaultZone: http://192.168.1.197:7001/eureka/
   instance:
     prefer-ip-address: true
 zuul:
@@ -55,7 +55,7 @@ zuul:
 security:
   oauth2:
     resource:
-      user-info-uri: http://192.168.150.158:6001/user
+      user-info-uri: http://192.168.1.197:6001/user
     #client:
     #  access-token-uri: http://192.168.150.158:6001/oauth/token
     #  user-authorization-uri: http://192.168.150.158:6001/oauth/authorize

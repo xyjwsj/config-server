@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone : http://192.168.150.158:7001/eureka/
+      defaultZone : http://192.168.1.197:7001/eureka/
   instance:
     hostname: discovery-server
     prefer-ip-address: true
@@ -34,8 +34,8 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: 192.168.150.158:9092
-          zk-nodes: 192.168.150.158:2181
+          brokers: 192.168.1.197:9092
+          zk-nodes: 192.168.1.197:2181
         bindings:
           report:
             destination: report_stream
@@ -48,7 +48,7 @@ spring:
               concurrency: 1
               partitioned: false
   zipkin:
-    base-url: http://192.168.150.158:10400
+    base-url: http://192.168.1.197:10400
 report:
   configs:
     bi:

@@ -3,11 +3,11 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone : http://192.168.150.158:7001/eureka/
+      defaultZone : http://192.168.1.197:7001/eureka/
   instance:
 #    hostname: discovery-server
     prefer-ip-address: true
-    ip-address: 192.168.150.158
+    ip-address: 192.168.1.197
 spring:
   task:
     pool:
@@ -42,4 +42,4 @@ hystrix:
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.notify.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/notify/dao/mybatis/mapper/*Mapper.xml
-service.host.ip: 192.168.150.158
+service.host.ip: 192.168.1.197
