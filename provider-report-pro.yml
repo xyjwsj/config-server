@@ -39,13 +39,13 @@ spring:
         bindings:
           report:
             destination: report_stream
-            group: ${group}
+            group: R1
             consumer:
               concurrency: 1
               partitioned: false
           log:
             destination: log_stream
-            group: ${group}
+            group: L1
             consumer:
               concurrency: 1
               partitioned: false
