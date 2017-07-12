@@ -36,12 +36,10 @@ spring:
         bindings:
           report:
             destination: report_stream
-            group: R1
             producer:
               partitionCount: 1
           log:
             destination: log_stream
-            group: L1
             producer:
               partitionCount: 1
   zipkin:
