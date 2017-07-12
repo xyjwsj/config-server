@@ -7,3 +7,6 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: ${host_ip}
+logging:
+  level: info
+  config: classpath:logback-spring.xml

@@ -49,6 +49,9 @@ spring:
               partitioned: false
   zipkin:
     base-url: http://zipkin-server:10400
+logging:
+  level: info
+  config: classpath:logback-spring.xml
 report:
   configs:
     bi:

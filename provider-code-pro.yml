@@ -37,3 +37,6 @@ hystrix:
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.code.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/code/dao/mybatis/mapper/*Mapper.xml
+logging:
+  level: info
+  config: classpath:logback-spring.xml

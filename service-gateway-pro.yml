@@ -57,7 +57,8 @@ security:
       user-info-uri: http://security-oauth/user
   ignored: /api/public/**
 logging:
-  level: debug
+  level: info
+  config: classpath:logback-spring.xml
 hystrix:
   command:
     default:
