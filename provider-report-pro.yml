@@ -40,15 +40,15 @@ spring:
           report:
             destination: report_stream
             group: R1
-            consumer:
-              concurrency: 1
-              partitioned: false
+           # consumer:
+           #   concurrency: 1
+           #   partitioned: false
           log:
             destination: log_stream
             group: L1
-            consumer:
-              concurrency: 1
-              partitioned: false
+           # consumer:
+           #   concurrency: 1
+           #   partitioned: false
   zipkin:
     base-url: http://zipkin-server:10400
 logging:
