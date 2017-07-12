@@ -41,14 +41,12 @@ spring:
             destination: report_stream
             group: R1
             consumer:
-              group: R1
               concurrency: 1
               partitioned: false
           log:
             destination: log_stream
             group: L1
             consumer:
-              group: L1
               concurrency: 1
               partitioned: false
   zipkin:
