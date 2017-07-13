@@ -36,32 +36,30 @@ spring:
         binder:
           brokers: ${kafka_brokers}
           zk-nodes: ${zookeeper_connect}
-        bindings:
-          report:
-            destination: report_stream
-            consumer:
-              concurrency: 1
-              partitioned: false
-          log:
-            destination: log_stream
-            consumer:
-              concurrency: 1
-              partitioned: false
-      #bindings:
-      #  reportin:
-      #    destination: report_stream
-      #    group: R1
-      #    consumer:
-      #      autoCommitOffset: false
-      #      concurrency: 1
-      #      partitioned: false
-      #  login:
-      #    destination: log_stream
-      #    group: L1
-      #    consumer:
-      #      autoCommitOffset: false
-      #      concurrency: 1
-      #      partitioned: false
+       # bindings:
+       #   report:
+       #     destination: report_stream
+       #     consumer:
+       #       concurrency: 1
+       #       partitioned: false
+       #   log:
+       #     destination: log_stream
+       #     consumer:
+       #       concurrency: 1
+       #       partitioned: false
+      bindings:
+        reportin:
+          destination: report_stream
+          group: R1
+          consumer:
+            concurrency: 1
+            partitioned: false
+        login:
+          destination: log_stream
+          group: L1
+          consumer:
+            concurrency: 1
+            partitioned: false
       #instance-index: ${instanceIndex}
       #instance-count: ${serverCount}
   zipkin:
