@@ -36,9 +36,6 @@ spring:
         binder:
           brokers: ${kafka_brokers}
           zk-nodes: ${zookeeper_connect}
-          auto-add-partitions: true
-          auto-create-topics: true
-          min-partition-count: 1
         bindings:
           report:
             destination: report_stream
