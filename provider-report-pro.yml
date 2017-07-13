@@ -48,13 +48,13 @@ spring:
        #       concurrency: 1
        #       partitioned: false
       bindings:
-        reportin:
+        report:
           destination: report_stream
           group: R1
           consumer:
             concurrency: 1
             partitioned: false
-        login:
+        log:
           destination: log_stream
           group: L1
           consumer:
