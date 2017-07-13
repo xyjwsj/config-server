@@ -50,21 +50,21 @@ spring:
             consumer:
               concurrency: 1
               partitioned: false
-      bindings:
-        reportin:
-          destination: report_stream
-          group: R1
-          consumer:
-            autoCommitOffset: false
-            concurrency: 1
-            partitioned: false
-        login:
-          destination: log_stream
-          group: L1
-          consumer:
-            autoCommitOffset: false
-            concurrency: 1
-            partitioned: false
+      #bindings:
+      #  reportin:
+      #    destination: report_stream
+      #    group: R1
+      #    consumer:
+      #      autoCommitOffset: false
+      #      concurrency: 1
+      #      partitioned: false
+      #  login:
+      #    destination: log_stream
+      #    group: L1
+      #    consumer:
+      #      autoCommitOffset: false
+      #      concurrency: 1
+      #      partitioned: false
       instance-index: ${instanceIndex}
       instance-count: ${serverCount}
   zipkin:
