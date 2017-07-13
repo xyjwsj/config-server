@@ -37,12 +37,12 @@ spring:
           brokers: ${kafka_brokers}
           zk-nodes: ${zookeeper_connect}
         bindings:
-          report:
+          reportin:
             destination: report_stream
             consumer:
               concurrency: 1
               partitioned: false
-          log:
+          login:
             destination: log_stream
             consumer:
               concurrency: 1
