@@ -54,6 +54,8 @@ spring:
             autoCommitOffset: false
             concurrency: 1
             partitioned: false
+      instance-index: ${instanceIndex}
+      instance-count: ${serverCount}
   zipkin:
     base-url: http://zipkin-server:10400
 logging:
