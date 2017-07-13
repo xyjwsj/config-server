@@ -36,19 +36,19 @@ spring:
         binder:
           brokers: ${kafka_brokers}
           zk-nodes: ${zookeeper_connect}
-        bindings:
-          report:
-            destination: report_stream
-            group: R1
-           # consumer:
-           #   concurrency: 1
-           #   partitioned: false
-          log:
-            destination: log_stream
-            group: L1
-           # consumer:
-           #   concurrency: 1
-           #   partitioned: false
+      bindings:
+        report:
+          destination: report_stream
+          group: R1
+          consumer:
+            concurrency: 1
+            partitioned: false
+        log:
+          destination: log_stream
+          group: L1
+          consumer:
+            concurrency: 1
+            partitioned: false
   zipkin:
     base-url: http://zipkin-server:10400
 logging:
