@@ -47,23 +47,10 @@ spring:
             autoCommitOffset: false
             concurrency: 1
             partitioned: false
-      #instance-index: ${instanceIndex}
-      #instance-count: ${serverCount}
       kafka:
         binder:
           brokers: ${kafka_brokers}
           zk-nodes: ${zookeeper_connect}
-       # bindings:
-       #   report:
-       #     destination: report_stream
-       #     consumer:
-       #       concurrency: 1
-       #       partitioned: false
-       #   log:
-       #     destination: log_stream
-       #     consumer:
-       #       concurrency: 1
-       #       partitioned: false
   zipkin:
     base-url: http://zipkin-server:10400
 logging:
