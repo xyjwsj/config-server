@@ -32,6 +32,23 @@ spring:
     min-evictable-idle-time-millis: 3600000
   cloud:
     stream:
+      bindings:
+        report:
+          destination: report_stream
+          group: R1
+          consumer:
+            autoCommitOffset: false
+            concurrency: 1
+            partitioned: false
+        log:
+          destination: log_stream
+          group: L1
+          consumer:
+            autoCommitOffset: false
+            concurrency: 1
+            partitioned: false
+      #instance-index: ${instanceIndex}
+      #instance-count: ${serverCount}
       kafka:
         binder:
           brokers: ${kafka_brokers}
@@ -47,21 +64,6 @@ spring:
        #     consumer:
        #       concurrency: 1
        #       partitioned: false
-      bindings:
-        report:
-          destination: report_stream
-          group: R1
-          consumer:
-            concurrency: 1
-            partitioned: false
-        log:
-          destination: log_stream
-          group: L1
-          consumer:
-            concurrency: 1
-            partitioned: false
-      #instance-index: ${instanceIndex}
-      #instance-count: ${serverCount}
   zipkin:
     base-url: http://zipkin-server:10400
 logging:
