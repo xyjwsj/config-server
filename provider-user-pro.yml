@@ -32,11 +32,11 @@ spring:
           brokers: ${kafka_brokers}
           zk-nodes: ${zookeeper_connect}
         bindings:
-          report:
+          reportout:
             destination: report_stream
             producer:
               partitionCount: 1
-          log:
+          logout:
             destination: log_stream
             producer:
               partitionCount: 1
