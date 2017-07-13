@@ -35,11 +35,11 @@ spring:
           auto-add-partitions: true
           auto-create-topics: true
       bindings:
-        reportOut:
+        reportout:
           destination: report_stream
           producer:
             partitionCount: 1
-        logOut:
+        logout:
           destination: log_stream
           producer:
             partitionCount: 1
