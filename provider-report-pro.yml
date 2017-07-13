@@ -39,6 +39,17 @@ spring:
           auto-add-partitions: true
           auto-create-topics: true
           min-partition-count: 1
+        bindings:
+          report:
+            destination: report_stream
+            consumer:
+              concurrency: 1
+              partitioned: false
+          log:
+            destination: log_stream
+            consumer:
+              concurrency: 1
+              partitioned: false
       bindings:
         reportin:
           destination: report_stream
