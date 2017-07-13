@@ -36,17 +36,22 @@ spring:
         binder:
           brokers: ${kafka_brokers}
           zk-nodes: ${zookeeper_connect}
+          auto-add-partitions: true
+          auto-create-topics: true
+          min-partition-count: 1
       bindings:
         reportIn:
           destination: report_stream
           group: R1
           consumer:
+            autoCommitOffset: false
             concurrency: 1
             partitioned: false
         logIn:
           destination: log_stream
           group: L1
           consumer:
+            autoCommitOffset: false
             concurrency: 1
             partitioned: false
   zipkin:
