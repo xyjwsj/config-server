@@ -19,9 +19,10 @@ zuul:
       order:
           path: /api/order/**
           serviceId: provider-order
-      validatechannel:
-          path: /api/validatechannel/**
+      publicvalidatechannel:
+          path: /api/public/validatechannel/**
           url: provider-validatechannel
+          stripPrefix: false
       notify:
           path: /api/notify/**
           url: provider-notify
