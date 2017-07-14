@@ -7,6 +7,59 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: ${host_ip}
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      max-lifetime: 1800000
+      maximum-pool-size: 64
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      minimum-idle: 20
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://db:3306/foreign_channel?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: ${db_username}
+    password: ${db_password}
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: ${kafka_brokers}
+          zk-nodes: ${zookeeper_connect}
+          auto-add-partitions: true
+          auto-create-topics: true
+          min-partition-count: 1
+      bindings:
+        report:
+          destination: report_stream
+          producer:
+            partitionCount: 1
+        log:
+          destination: log_stream
+          producer:
+            partitionCount: 1
+  zipkin:
+    base-url: http://zipkin-server:10400
+hystrix:
+  threadpool:
+    default:
+      coreSize: 150 #缺省为10
+      maxQueueSize: 100
+      queueSizeRejectionThreshold: 1000
+      #active: 50
+      #maxActive: 200
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+mybatis:
+  type-aliases-package: com.hoolai.access.foreign.provider.validatechannel.dao.mybatis.vo
+  mapper-locations: classpath:com/hoolai/access/foreign/provider/validatechannel/dao/mybatis/mapper/*Mapper.xml
 logging:
   level: info
   config: classpath:logback-spring.xml
