@@ -9,3 +9,53 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: 192.168.1.197
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      max-lifetime: 1800000
+      maximum-pool-size: 32
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      minimum-idle: 5
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.150.158:3306/foreign_channel?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+    time-between-eviction-runs-millis: 300000
+    num-tests-per-eviction-run: 3
+    min-evictable-idle-time-millis: 3600000
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.150.158:9092
+          zk-nodes: 192.168.150.158:2181
+        bindings:
+          report:
+            destination: report_stream
+            producer:
+              partitionCount: 1
+          log:
+            destination: log_stream
+            producer:
+              partitionCount: 1
+  zipkin:
+    base-url: http://192.168.150.158:10400
+mybatis:
+  type-aliases-package: com.hoolai.access.foreign.provider.validatechannel.dao.mybatis.vo
+  mapper-locations: classpath:com/hoolai/access/foreign/provider/validatechannel/dao/mybatis/mapper/*Mapper.xml
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+logging:
+  level: info
+#  file: /var/logs/provider_user.log
+#  config: logback-spring.xml11
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200 #缺省为10
