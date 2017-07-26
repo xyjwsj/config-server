@@ -59,6 +59,6 @@ logging:
 report:
   configs:
     bi:
-      id: 200
+      id: 300
       path: /var/bi
 service.host.ip: ${host_ip}
