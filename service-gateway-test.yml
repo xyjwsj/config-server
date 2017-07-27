@@ -60,6 +60,9 @@ zuul:
 ignored.prefix: 
   /api/user/oauth
   /api/public/pay
+validate.data.prefix:
+  /api/public/pay/apple
+  /api/public/pay/google
 security:
   oauth2:
     resource:
