@@ -58,11 +58,15 @@ zuul:
   retryable: false
   ignored-patterns: /**/private/api/**
 ignored.prefix: 
-  /api/user/oauth
-  /api/public/pay
+  oauth:
+    /api/user/oauth
+  order:
+    /api/public/pay
 validate.data.prefix:
-  /api/public/pay/apple
-  /api/public/pay/google
+  apple:
+    /api/public/pay/apple
+  goole:
+    /api/public/pay/google
 security:
   oauth2:
     resource:
