@@ -57,16 +57,14 @@ zuul:
     max-semaphores: 1000
   retryable: false
   ignored-patterns: /**/private/api/**
-ignored.prefix: 
-  oauth:
-    /api/user/oauth
-  order:
-    /api/public/pay
-validate.data.prefix:
-  apple:
-    /api/public/pay/apple
-  goole:
-    /api/public/pay/google
+hoolai:
+  prefix:
+    ignore:
+      oauth: /api/user/oauth
+      order: /api/public/pay
+    validate:
+      apple: /api/public/pay/apple
+      goole: /api/public/pay/google
 security:
   oauth2:
     resource:
