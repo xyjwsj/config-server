@@ -57,7 +57,9 @@ zuul:
     max-semaphores: 1000
   retryable: false
   ignored-patterns: /**/private/api/**
-ignored.prefix: /api/user/oauth
+ignored.prefix: 
+  /api/user/oauth
+  /api/public/pay
 security:
   oauth2:
     resource:
