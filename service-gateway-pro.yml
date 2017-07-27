@@ -61,7 +61,9 @@ security:
       loadBalanced: true
       user-info-uri: http://security-oauth/user
   ignored: /api/public/**
-ignored.prefix: /api/user/oauth
+ignored.prefix: 
+  /api/user/oauth
+  /api/public/pay
 logging:
   level: info
   config: classpath:logback-spring.xml
