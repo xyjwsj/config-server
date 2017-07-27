@@ -64,6 +64,9 @@ security:
 ignored.prefix: 
   /api/user/oauth
   /api/public/pay
+validate.data.prefix:
+  /api/public/pay/apple
+  /api/public/pay/google
 logging:
   level: info
   config: classpath:logback-spring.xml
