@@ -61,12 +61,14 @@ security:
       loadBalanced: true
       user-info-uri: http://security-oauth/user
   ignored: /api/public/**
-ignored.prefix: 
-  /api/user/oauth
-  /api/public/pay
-validate.data.prefix:
-  /api/public/pay/apple
-  /api/public/pay/google
+hoolai:
+  prefix:
+    ignore:
+      oauth: /api/user/oauth
+      order: /api/public/pay
+    validate:
+      apple: /api/public/pay/apple
+      goole: /api/public/pay/google
 logging:
   level: info
   config: classpath:logback-spring.xml
