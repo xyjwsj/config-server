@@ -47,7 +47,7 @@ zuul:
           #path: /oauth/**
           #serviceId: security-oauth
           #stripPrefix: false
-          #url: http://192.168.150.158:6001/oauth/token
+          #url: http://192.168.20.112:6001/oauth/token
   host:
     socket-timeout-millis: 60000
     connect-timeout-millis: 60000
@@ -70,8 +70,8 @@ security:
     resource:
       user-info-uri: http://192.168.1.197:6001/user
     #client:
-    #  access-token-uri: http://192.168.150.158:6001/oauth/token
-    #  user-authorization-uri: http://192.168.150.158:6001/oauth/authorize
+    #  access-token-uri: http://192.168.20.112:6001/oauth/token
+    #  user-authorization-uri: http://192.168.20.112:6001/oauth/authorize
     #  client-secret: 7g8trcvehjp4bi52
     #  client-id: yvz5o319oolklggq
     #  scope: refresh_token,password
