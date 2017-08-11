@@ -21,6 +21,7 @@ hystrix:
         timeout:
           enabled: false
         isolation:
+          strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 60000
 feign:
