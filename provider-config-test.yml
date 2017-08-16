@@ -1,0 +1,50 @@
+server:
+  port: 8501
+  error:
+    path: /exception/error
+eureka:
+  client:
+    service-url:
+      defaultZone : http://192.168.1.197:7001/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.1.197
+spring:
+  #cloud:
+  #  stream:
+  #    kafka:
+  #      binder:
+  #        brokers: 192.168.20.112:9092
+  #        zk-nodes: 192.168.20.112:2181
+  #    bindings:
+  #      input:
+  #        destination: provider-order
+  #      output:
+  #        destination: provider-appinfo
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      max-lifetime: 1800000
+      maximum-pool-size: 20
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      minimum-idle: 10
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.20.112:3306/foreign_config?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+  zipkin:
+    base-url: http://zipkin-server:10400
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+mybatis:
+  type-aliases-package: com.hoolai.access.foreign.provider.config.dao.mybatis.vo
+  mapper-locations: classpath:com/hoolai/access/foreign/provider/config/dao/mybatis/mapper/*Mapper.xml
