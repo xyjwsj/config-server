@@ -59,11 +59,6 @@ spring:
               partitionCount: 1
   zipkin:
     base-url: http://192.168.20.112:10400
-  thymeleaf:
-    cache: false
-    mode: HTML5
-    encoding: UTF-8
-    content-type: text/html
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
