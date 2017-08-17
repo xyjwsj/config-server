@@ -75,7 +75,7 @@ security:
     #  client-secret: 7g8trcvehjp4bi52
     #  client-id: yvz5o319oolklggq
     #  scope: refresh_token,password
-  ignored: /api/public/**,/api/user/**.html
+  ignored: /api/public/**,/api/user/**.(html|css|ico|js)$
 logging:
   level: debug
 hystrix:
