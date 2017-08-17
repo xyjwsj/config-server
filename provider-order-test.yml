@@ -44,6 +44,11 @@ spring:
     password: hoolai
   zipkin:
     base-url: http://zipkin-server:10400
+  thymeleaf:
+    cache: false
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
 hystrix:
   threadpool:
     default:
