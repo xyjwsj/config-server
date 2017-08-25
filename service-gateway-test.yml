@@ -23,21 +23,21 @@ zuul:
           stripPrefix: false
       publicvalidatechannel:
           path: /api/public/validatechannel/**
-          url: provider-validatechannel
+          serviceId: provider-validatechannel
           stripPrefix: false
       notify:
           path: /api/notify/**
-          url: provider-notify
+          serviceId: provider-notify
       report:
           path: /api/report/**
-          url: provider-report
+          serviceId: provider-report
       publicreport:
           path: /api/public/report/**
-          url: provider-report
+          serviceId: provider-report
           stripPrefix: false
       finance:
           path: /api/finance/**
-          url: provider-finance
+          serviceId: provider-finance
       publicuser:
           path: /api/public/user/**
           serviceId: provider-user
