@@ -7,7 +7,9 @@ eureka:
     service-url:
       defaultZone : http://192.168.1.197:7001/eureka/
   instance:
+#    hostname: discovery-server
     prefer-ip-address: true
+    ip-address: 192.168.1.197
 spring:
   cloud:
     stream:
