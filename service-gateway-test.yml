@@ -35,6 +35,9 @@ zuul:
           path: /api/public/report/**
           url: provider-report
           stripPrefix: false
+      finance:
+          path: /api/finance/**
+          url: provider-finance
       publicuser:
           path: /api/public/user/**
           serviceId: provider-user
