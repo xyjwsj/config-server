@@ -44,9 +44,9 @@ spring:
 hystrix:
   threadpool:
     default:
-      coreSize: 150 #缺省为10
-      maxQueueSize: 100
-      queueSizeRejectionThreshold: 1000
+      coreSize: 20 #缺省为10
+      maxQueueSize: 50
+      queueSizeRejectionThreshold: 50
       #active: 50
       #maxActive: 200
   command:
@@ -56,7 +56,7 @@ hystrix:
           enabled: true
         isolation:
           thread:
-            timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 5000
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.validatechannel.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/validatechannel/dao/mybatis/mapper/*Mapper.xml
