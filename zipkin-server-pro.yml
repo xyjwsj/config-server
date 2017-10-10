@@ -1,0 +1,14 @@
+server:
+  port: ${run_port}
+  error:
+    path: /exception/error
+eureka:
+  client:
+    service-url:
+      defaultZone : ${eureka_url}
+  instance:
+    prefer-ip-address: true
+    ip-address: ${host_ip}
+logging:
+  level: info
+  config: classpath:logback-spring.xml
