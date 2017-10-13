@@ -52,7 +52,7 @@ spring:
           brokers: ${kafka_brokers}
           zk-nodes: ${zookeeper_connect}
   zipkin:
-    base-url: http://zipkin-server:10400
+    base-url: http://zipkin-server:${zipkin_port}
 logging:
   level: info
   config: classpath:logback-spring.xml
