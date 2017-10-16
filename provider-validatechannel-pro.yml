@@ -45,8 +45,8 @@ spring:
           destination: log_stream
           producer:
             partitionCount: 1
-  zipkin:
-    base-url: http://zipkin-server:${zipkin_port}
+#  zipkin:
+#    base-url: http://zipkin-server:${zipkin_port}
 hystrix:
 #  threadpool:
 #    default:
