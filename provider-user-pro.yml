@@ -44,7 +44,7 @@ spring:
           producer:
             partitionCount: 1
   zipkin:
-    base-url: http://zipkin-server:10400
+    base-url: http://zipkin-server:${zipkin_port}
 hystrix:
   threadpool:
     default:
