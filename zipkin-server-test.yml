@@ -16,6 +16,6 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   sleuth:
     enabled: false
-  zipkin:
-    storage:
-      type: mysql
+zipkin:
+  storage:
+    type: mysql
