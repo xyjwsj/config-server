@@ -4,8 +4,11 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    service-url:
-      defaultZone: http://${spring.application.name}:${server.port}/eureka
+#    service-url:
+#      defaultZone: http://${spring.application.name}:${server.port}/eureka
+    use-dns-for-fetching-service-urls: true
+    eureka-server-d-n-s-name: eureka.com
+    region: region-test
   instance:
     metadata-map:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
@@ -16,3 +19,4 @@ endpoints:
   shutdown:
     enabled: true
     sensitive: false
+
