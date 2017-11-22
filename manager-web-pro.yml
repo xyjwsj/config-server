@@ -1,0 +1,34 @@
+server:
+  port: ${run_port}
+  error:
+    path: /exception/error
+eureka:
+  client:
+    service-url:
+      defaultZone : ${eureka_url}
+  instance:
+    prefer-ip-address: true
+    ip-address: ${host_ip}
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      max-lifetime: 1800000
+      maximum-pool-size: 20
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      minimum-idle: 10
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://db:3306/foreign_web?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: ${db_username}
+    password: ${db_password}
+mybatis:
+  type-aliases-package: com.hoolai.access.foreign.manager.web.dao.mybatis.vo
+  mapper-locations: classpath:com/hoolai/access/foreign/manager/web/dao/mybatis/mapper/*Mapper.xml
+oauth:
+  suffix:
+    open: /login,/registe
+logging:
+  level: info
+  config: classpath:logback-spring.xml
