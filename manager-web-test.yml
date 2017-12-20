@@ -5,10 +5,10 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone : http://192.168.1.197:7001/eureka/
+      defaultZone : http://10.1.129.197:7001/eureka/
   instance:
     prefer-ip-address: true
-    ip-address: 192.168.1.197
+    ip-address: 10.1.129.197
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource

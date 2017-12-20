@@ -5,10 +5,10 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone : http://192.168.1.197:7001/eureka/
+      defaultZone : http://10.1.129.197:7001/eureka/
   instance:
     prefer-ip-address: true
-    ip-address: 192.168.1.197
+    ip-address: 10.1.129.197
 hystrix:
   threadpool:
     default:
@@ -39,15 +39,15 @@ spring:
       idle-timeout: 600000
       minimum-idle: 20
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.20.112:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
   cloud:
     stream:
       kafka:
         binder:
-          brokers: 192.168.1.197:9092
-          zk-nodes: 192.168.1.197:2181
+          brokers: 10.1.129.197:9092
+          zk-nodes: 10.1.129.197:2181
         bindings:
           report:
             destination: report_stream
