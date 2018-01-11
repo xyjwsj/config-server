@@ -46,6 +46,10 @@ zuul:
           path: /api/public/pay/**
           serviceId: provider-order
           stripPrefix: false
+      publicResourceOrder:
+          path: /api/public/resource/**
+          serviceId: provider-order
+          stripPrefix: false
       #hloauth:
           #path: /oauth/**
           #serviceId: security-oauth
