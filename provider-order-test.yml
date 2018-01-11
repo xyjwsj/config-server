@@ -54,6 +54,7 @@ spring:
     encoding: UTF-8
     content-type: text/html
     prefix: classpath:/templates/ 
+    suffix: .html
 hystrix:
   threadpool:
     default:
