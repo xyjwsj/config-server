@@ -53,6 +53,7 @@ spring:
     mode: HTML5
     encoding: UTF-8
     content-type: text/html
+    prefix: classpath:/templates/ 
 hystrix:
   threadpool:
     default:
