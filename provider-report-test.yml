@@ -7,6 +7,10 @@ eureka:
   instance:
     hostname: discovery-server
     prefer-ip-address: true
+proxy:
+  enabled: true
+  host: 10.1.1.253
+  port: 8118
 spring:
   task:
     pool:
