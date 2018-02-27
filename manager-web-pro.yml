@@ -20,7 +20,7 @@ spring:
       idle-timeout: 600000
       minimum-idle: 10
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://db:8096/foreign_web?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://db_new:8096/foreign_web?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: ${db_username}
     password: ${db_password}
 mybatis:
