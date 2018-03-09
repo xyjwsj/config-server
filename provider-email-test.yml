@@ -10,7 +10,7 @@ eureka:
     prefer-ip-address: true
     ip-address: 10.1.129.197
 proxy:
-  enabled: false
+  enabled: true
   host: 10.1.1.130
   port: 9998
 hoolai:
