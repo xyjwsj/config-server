@@ -16,6 +16,7 @@ zuul:
           serviceId: provider-user
       order:
           path: /api/order/**
+          sensitiveHeaders: Cookie,Set-Cookie
           serviceId: provider-order
       publicorder:
           path: /api/public/pay/**
