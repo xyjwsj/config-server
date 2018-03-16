@@ -11,7 +11,7 @@ eureka:
     region: region-test
     register-with-eureka: false
     fetch-registry: false
-    eureka-server-u-r-l-context: eureka
+#    eureka-server-u-r-l-context: eureka
     prefer-same-zone-eureka: true
   instance:
     metadata-map:
