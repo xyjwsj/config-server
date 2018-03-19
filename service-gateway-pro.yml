@@ -12,6 +12,7 @@ eureka:
   instance:
     prefer-ip-address: true
 zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
   routes:
       user:
           path: /api/user/**
