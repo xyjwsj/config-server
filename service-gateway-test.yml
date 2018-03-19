@@ -21,6 +21,7 @@ zuul:
           path: /api/public/pay/**
           serviceId: provider-order
           sensitiveHeaders: Cookie,Set-Cookie
+          customSensitiveHeaders: true
           stripPrefix: false
       publicvalidatechannel:
           path: /api/public/validatechannel/**
