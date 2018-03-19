@@ -15,12 +15,12 @@ zuul:
           path: /api/user/**
           serviceId: provider-user
       order:
-          path: /api/order/**
-          sensitiveHeaders: Cookie,Set-Cookie
+          path: /api/order/**          
           serviceId: provider-order
       publicorder:
           path: /api/public/pay/**
           serviceId: provider-order
+          sensitiveHeaders: Cookie,Set-Cookie
           stripPrefix: false
       publicvalidatechannel:
           path: /api/public/validatechannel/**
