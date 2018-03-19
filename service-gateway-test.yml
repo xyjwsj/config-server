@@ -10,6 +10,7 @@ eureka:
   instance:
     prefer-ip-address: true
 zuul:
+  sensitive-headers: Cookie,Set-Cookie
   routes:
       user:
           path: /api/user/**
@@ -17,11 +18,9 @@ zuul:
       order:
           path: /api/order/**          
           serviceId: provider-order
-          sensitiveHeaders: 
       publicorder:
           path: /api/public/pay/**
           serviceId: provider-order
-          sensitiveHeaders: 
           stripPrefix: false
       publicvalidatechannel:
           path: /api/public/validatechannel/**
