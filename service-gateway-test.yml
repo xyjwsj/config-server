@@ -17,6 +17,7 @@ zuul:
       order:
           path: /api/order/**          
           serviceId: provider-order
+          sensitiveHeaders: 
       publicorder:
           path: /api/public/pay/**
           serviceId: provider-order
