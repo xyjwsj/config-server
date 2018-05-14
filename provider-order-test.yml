@@ -12,21 +12,21 @@ proxy:
   host: 10.1.1.253
   port: 8118
 spring:
-  cloud:
-    stream:
-      kafka:
-        binder:
-          brokers: 10.1.129.197:9092
-          zk-nodes: 10.1.129.197:2181
-        bindings:
-          report:
-            destination: report_stream
-            producer:
-              partitionCount: 1
-          log:
-            destination: log_stream
-            producer:
-              partitionCount: 1
+  #cloud:
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: 10.1.129.197:9092
+#          zk-nodes: 10.1.129.197:2181
+#        bindings:
+#          report:
+#            destination: report_stream
+#            producer:
+#              partitionCount: 1
+#          log:
+#            destination: log_stream
+#            producer:
+#              partitionCount: 1
   task:
     pool:
       corePoolSize: 10
