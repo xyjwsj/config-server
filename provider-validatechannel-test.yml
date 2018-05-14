@@ -11,8 +11,8 @@ eureka:
     ip-address: 10.1.129.197
 proxy:
   enabled: true
-  host: 192.168.1.143
-  port: 8118
+  host: 10.1.1.253
+  port: 9998
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
