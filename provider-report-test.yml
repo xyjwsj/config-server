@@ -34,23 +34,23 @@ spring:
     time-between-eviction-runs-millis: 300000
     num-tests-per-eviction-run: 3
     min-evictable-idle-time-millis: 3600000
-  #cloud:
-#    stream:
-#      kafka:
-#        binder:
-#          brokers: 10.1.129.197:9092
-#          zk-nodes: 10.1.129.197:2181
-#        bindings:
-#          report:
-#            destination: report_stream
-#            consumer:
-#              concurrency: 1
-#              partitioned: false
-#          log:
-#            destination: log_stream
-#            consumer:
-#              concurrency: 1
-#              partitioned: false
+  cloud:
+   stream:
+     kafka:
+       binder:
+         brokers: 10.1.129.197:9092
+         zk-nodes: 10.1.129.197:2181
+       bindings:
+         report:
+           destination: report_stream
+           consumer:
+             concurrency: 1
+             partitioned: false
+         log:
+           destination: log_stream
+           consumer:
+             concurrency: 1
+             partitioned: false
   zipkin:
     base-url: http://10.1.129.197:10400
 report:
