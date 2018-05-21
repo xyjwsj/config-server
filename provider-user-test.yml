@@ -66,11 +66,23 @@ datasource:
     jdbc-url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
   read:
     driver-class-name: com.mysql.jdbc.Driver
-    jdbc-url: jdbc:mysql://10.1.1.131:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    jdbc-url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
 
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo

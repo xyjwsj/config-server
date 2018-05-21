@@ -18,41 +18,65 @@ spring:
       maxPoolSize: 30
       keepAliveSeconds: 10000
       queueCapacity: 30
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      max-lifetime: 1800000
-      maximum-pool-size: 32
-      read-only: false
-      connection-timeout: 30000
-      idle-timeout: 600000
-      minimum-idle: 5
+  #datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    hikari:
+#      max-lifetime: 1800000
+#      maximum-pool-size: 32
+#      read-only: false
+#      connection-timeout: 30000
+#      idle-timeout: 600000
+#      minimum-idle: 5
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://10.1.1.253:3306/foreign_report?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: hoolai
+#    time-between-eviction-runs-millis: 300000
+#    num-tests-per-eviction-run: 3
+#    min-evictable-idle-time-millis: 3600000
+#  #cloud:
+##   stream:
+##     kafka:
+##       binder:
+##         brokers: 10.1.129.197:9092
+##         zk-nodes: 10.1.129.197:2181
+##       bindings:
+##         report:
+##           destination: report_stream
+##           consumer:
+##             concurrency: 1
+##             partitioned: false
+##         log:
+##           destination: log_stream
+##           consumer:
+##             concurrency: 1
+##             partitioned: false
+#  zipkin:
+#    base-url: http://10.1.129.197:10400
+datasource:
+  type: com.zaxxer.hikari.HikariDataSource
+  write:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.1.1.253:3306/foreign_report?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    jdbc-url: jdbc:mysql://10.1.1.253:3306/foreign_report?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
-    time-between-eviction-runs-millis: 300000
-    num-tests-per-eviction-run: 3
-    min-evictable-idle-time-millis: 3600000
-  #cloud:
-#   stream:
-#     kafka:
-#       binder:
-#         brokers: 10.1.129.197:9092
-#         zk-nodes: 10.1.129.197:2181
-#       bindings:
-#         report:
-#           destination: report_stream
-#           consumer:
-#             concurrency: 1
-#             partitioned: false
-#         log:
-#           destination: log_stream
-#           consumer:
-#             concurrency: 1
-#             partitioned: false
-  zipkin:
-    base-url: http://10.1.129.197:10400
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
+  read:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://10.1.1.253:3306/foreign_report?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
 report:
   configs:
     bi:

@@ -9,33 +9,57 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: 10.1.129.197
-spring:
-  #cloud:
-  #  stream:
-  #    kafka:
-  #      binder:
-  #        brokers: 192.168.20.112:9092
-  #        zk-nodes: 192.168.20.112:2181
-  #    bindings:
-  #      input:
-  #        destination: provider-order
-  #      output:
-  #        destination: provider-appinfo
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      max-lifetime: 1800000
-      maximum-pool-size: 20
-      read-only: false
-      connection-timeout: 30000
-      idle-timeout: 600000
-      minimum-idle: 10
+#spring:
+#  #cloud:
+#  #  stream:
+#  #    kafka:
+#  #      binder:
+#  #        brokers: 192.168.20.112:9092
+#  #        zk-nodes: 192.168.20.112:2181
+#  #    bindings:
+#  #      input:
+#  #        destination: provider-order
+#  #      output:
+#  #        destination: provider-appinfo
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    hikari:
+#      max-lifetime: 1800000
+#      maximum-pool-size: 20
+#      read-only: false
+#      connection-timeout: 30000
+#      idle-timeout: 600000
+#      minimum-idle: 10
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://10.1.1.253:3306/foreign_appinfo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: hoolai
+#  zipkin:
+#    base-url: http://zipkin-server:10400
+datasource:
+  type: com.zaxxer.hikari.HikariDataSource
+  write:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.1.1.253:3306/foreign_appinfo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    jdbc-url: jdbc:mysql://10.1.1.253:3306/foreign_appinfo?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
-  zipkin:
-    base-url: http://zipkin-server:10400
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
+  read:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://10.1.1.253:3306/foreign_appinfo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20 
 hystrix:
   command:
     default:
