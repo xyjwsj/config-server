@@ -38,10 +38,10 @@ spring:
       connection-timeout: 30000
       idle-timeout: 600000
       minimum-idle: 20
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: root
-    password: hoolai
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: hoolai
 #  cloud:
 #    stream:
 #      kafka:
@@ -59,6 +59,18 @@ spring:
 #              partitionCount: 1
   zipkin:
     base-url: http://192.168.20.112:10400
+datasource:
+  write:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+  read:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.1.1.131:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: hoolai
+    password: hoolai
+
 mybatis:
   type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
   mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
