@@ -28,16 +28,16 @@ feign:
     enabled: false
   okhttp:
     enabled: true
-spring:
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      max-lifetime: 1800000
-      maximum-pool-size: 32
-      read-only: false
-      connection-timeout: 30000
-      idle-timeout: 600000
-      minimum-idle: 20
+#spring:
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    hikari:
+#      max-lifetime: 1800000
+#      maximum-pool-size: 32
+#      read-only: false
+#      connection-timeout: 30000
+#      idle-timeout: 600000
+#      minimum-idle: 20
 #    driver-class-name: com.mysql.jdbc.Driver
 #    url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
 #    username: root
@@ -60,6 +60,7 @@ spring:
   zipkin:
     base-url: http://192.168.20.112:10400
 datasource:
+  type: com.zaxxer.hikari.HikariDataSource
   write:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
