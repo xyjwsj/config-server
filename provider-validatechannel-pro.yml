@@ -14,19 +14,19 @@ eureka:
     prefer-ip-address: true
     ip-address: ${host_ip}
 spring:
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      max-lifetime: 1800000
-      maximum-pool-size: 64
-      read-only: false
-      connection-timeout: 30000
-      idle-timeout: 600000
-      minimum-idle: 20
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://db:3306/foreign_channel?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: ${db_username}
-    password: ${db_password}
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    hikari:
+#      max-lifetime: 1800000
+#      maximum-pool-size: 64
+#      read-only: false
+#      connection-timeout: 30000
+#      idle-timeout: 600000
+#      minimum-idle: 20
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://db:3306/foreign_channel?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: ${db_username}
+#    password: ${db_password}
   #cloud:
 #    stream:
 #      kafka:
@@ -45,8 +45,32 @@ spring:
 #          destination: log_stream
 #          producer:
 #            partitionCount: 1
-#  zipkin:
-#    base-url: http://zipkin-server:${zipkin_port}
+  zipkin:
+    base-url: http://zipkin-server:${zipkin_port}
+datasource:
+  type: com.zaxxer.hikari.HikariDataSource
+  write:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://db:3306/foreign_channel?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: ${db_username}
+    password: ${db_password}
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
+  read:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://db_read:3306/foreign_channel?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: ${db_username}
+    password: ${db_password}
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
 hystrix:
 #  threadpool:
 #    default:
