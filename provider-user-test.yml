@@ -40,7 +40,7 @@ spring:
           min-partition-count: 1
         bindings:
           log:
-            destination: filetest_fileread
+            destination: filetest.fileread
             producer:
               partitionCount: 3
   zipkin:
