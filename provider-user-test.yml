@@ -28,35 +28,18 @@ feign:
     enabled: false
   okhttp:
     enabled: true
-#spring:
-#  datasource:
-#    type: com.zaxxer.hikari.HikariDataSource
-#    hikari:
-#      max-lifetime: 1800000
-#      maximum-pool-size: 32
-#      read-only: false
-#      connection-timeout: 30000
-#      idle-timeout: 600000
-#      minimum-idle: 20
-#    driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://10.1.1.253:3306/foreign_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
-#    username: root
-#    password: hoolai
-#  cloud:
-#    stream:
-#      kafka:
-#        binder:
-#          brokers: 10.1.129.197:9092
-#          zk-nodes: 10.1.129.197:2181
-#        bindings:
-#          report:
-#            destination: report_stream
-#            producer:
-#              partitionCount: 1
-#          log:
-#            destination: log_stream
-#            producer:
-#              partitionCount: 1
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 10.1.129.197:9092
+          zk-nodes: 10.1.129.197:2181
+        bindings:
+          output:
+            destination: filetest.fileread
+            producer:
+              partitionCount: 1
   zipkin:
     base-url: http://192.168.20.112:10400
 datasource:
