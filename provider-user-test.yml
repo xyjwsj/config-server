@@ -35,6 +35,9 @@ spring:
         binder:
           brokers: 10.1.129.197:9092
           zk-nodes: 10.1.129.197:2181
+          auto-add-partitions: true
+          auto-create-topics: true
+          min-partition-count: 1
         bindings:
           log:
             destination: filetest.fileread
