@@ -36,7 +36,7 @@ spring:
           brokers: 10.1.129.197:9092
           zk-nodes: 10.1.129.197:2181
         bindings:
-          output:
+          log:
             destination: filetest.fileread
             producer:
               partitionCount: 1
