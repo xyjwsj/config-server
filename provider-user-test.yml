@@ -39,7 +39,7 @@ spring:
           log:
             destination: filetest.fileread
             producer:
-              partitionCount: 1
+              partitionCount: 3
   zipkin:
     base-url: http://192.168.20.112:10400
 datasource:
