@@ -35,14 +35,11 @@ spring:
         binder:
           brokers: 10.1.129.197:9092
           zk-nodes: 10.1.129.197:2181
-          auto-add-partitions: true
-          auto-create-topics: true
-          min-partition-count: 1
-        bindings:
-          log_file:
-            destination: log_stream_test
-            producer:
-              partitionCount: 3
+      bindings:
+        log:
+          destination: log_stream
+          producer:
+            partitionCount: 3
   zipkin:
     base-url: http://192.168.20.112:10400
 datasource:
