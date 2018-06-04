@@ -39,8 +39,8 @@ spring:
           auto-create-topics: true
           min-partition-count: 1
         bindings:
-          log:
-            destination: log_stream
+          log_file:
+            destination: log_stream_test
             producer:
               partitionCount: 3
   zipkin:
