@@ -33,14 +33,14 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: 10.1.129.197:9092
+          brokers: 10.1.129.197:9092,10.1.129.133:9092,10.1.1.253:9094
           zk-nodes: 10.1.129.197:2181
           auto-add-partitions: true
           auto-create-topics: true
           min-partition-count: 1
       bindings:
         log:
-          destination: log_stream
+          destination: datatest.readData
           producer:
             partitionCount: 3
   zipkin:
