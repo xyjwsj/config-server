@@ -39,7 +39,7 @@ spring:
           auto-create-topics: true
           min-partition-count: 1
       bindings:
-        log:
+        output:
           destination: filetest.fileread
           producer:
             partitionCount: 3
