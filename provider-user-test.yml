@@ -39,7 +39,7 @@ spring:
           auto-create-topics: true
           min-partition-count: 1
       bindings:
-        output:
+        log:
           destination: log_stream
           producer:
             partitionCount: 3
