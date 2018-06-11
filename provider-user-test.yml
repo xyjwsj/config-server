@@ -33,7 +33,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: 10.1.129.197:9092,10.1.129.133:9092,10.1.1.253:9094
+          brokers: 10.1.129.197:9092,10.1.129.133:9092,10.1.129.197:9093
           zk-nodes: 10.1.129.197:2181
           auto-add-partitions: true
           auto-create-topics: true
