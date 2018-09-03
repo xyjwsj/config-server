@@ -73,6 +73,7 @@ hoolai:
     validate:
       apple: /api/public/pay/apple
       goole: /api/public/pay/google
+      samsung: /api/public/pay/samsung
 security:
   oauth2:
     resource:
