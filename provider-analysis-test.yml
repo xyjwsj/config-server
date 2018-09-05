@@ -1,0 +1,71 @@
+server:
+  port: 8601
+  error:
+    path: /exception/error
+eureka:
+  client:
+    service-url:
+      defaultZone : http://10.1.129.197:7001/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 10.1.129.197
+hystrix:
+  threadpool:
+    default:
+      coreSize: 100 #缺省为10
+      maxQueueSize: 80
+      queueSizeRejectionThreshold: 50
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+spring:
+  zipkin:
+    base-url: http://192.168.20.112:10400
+  redis:
+    host: 10.1.1.253
+    port: 6379
+      pool:
+        max-active: 300
+        min-idle: 0
+        max-wait: -1
+        max-idle: 50
+datasource:
+  type: com.zaxxer.hikari.HikariDataSource
+  write:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://10.1.1.253:3306/analysistic_backup?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
+  read:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://10.1.1.253:3306/analysistic_backup?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hoolai
+    max-lifetime: 1800000
+    maximum-pool-size: 32
+    read-only: false
+    connection-timeout: 30000
+    idle-timeout: 600000
+    minimum-idle: 20
+mybatis:
+  type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
+  mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
+logging:
+  level: info
+  config: classpath:logback-spring.xml
