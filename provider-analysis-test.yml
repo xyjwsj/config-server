@@ -64,8 +64,8 @@ datasource:
     idle-timeout: 600000
     minimum-idle: 20
 mybatis:
-  type-aliases-package: com.hoolai.access.foreign.provider.user.dao.mybatis.vo
-  mapper-locations: classpath:com/hoolai/access/foreign/provider/user/dao/mybatis/mapper/*Mapper.xml
+  type-aliases-package: com.hoolai.access.foreign.provider.analysis.dao.mybatis.vo
+  mapper-locations: classpath:com/hoolai/access/foreign/provider/analysis/dao/mybatis/mapper/*Mapper.xml
 logging:
   level: info
   config: classpath:logback-spring.xml
