@@ -35,11 +35,11 @@ spring:
     host: ${redis_host}
     password: ${redis_password}
     port: 6379
-      pool:
-        max-active: 300
-        min-idle: 0
-        max-wait: -1
-        max-idle: 50
+    pool:
+      max-active: 300
+      min-idle: 0
+      max-wait: -1
+      max-idle: 50
 datasource:
   type: com.zaxxer.hikari.HikariDataSource
   write:
