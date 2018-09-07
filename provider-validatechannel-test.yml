@@ -13,7 +13,7 @@ proxy:
   enabled: true
   host: 10.1.1.253
   port: 8118
-spr#ing:
+spring:
 #  datasource:
 #    type: com.zaxxer.hikari.HikariDataSource
 #    hikari:
