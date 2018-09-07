@@ -27,7 +27,7 @@ spring:
        log:
          destination: usercollection.readData
          producer:
-           partitionCount: 1
+           partitionCount: 3
   zipkin:
     base-url: http://zipkin-server:${zipkin_port}
 datasource:
