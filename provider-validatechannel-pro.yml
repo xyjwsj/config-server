@@ -15,19 +15,19 @@ eureka:
     ip-address: ${host_ip}
 spring:
   cloud:
-   stream:
-     kafka:
-       binder:
-         brokers: ${kafka_brokers}
-         zk-nodes: ${zookeeper_connect}
-         auto-add-partitions: true
-         auto-create-topics: true
-         min-partition-count: 1
-     bindings:
-       log:
-         destination: usercollection.readData
-         producer:
-           partitionCount: 3
+    stream:
+      kafka:
+        binder:
+          brokers: ${kafka_brokers}
+          zk-nodes: ${zookeeper_connect}
+          auto-add-partitions: true
+          auto-create-topics: true
+          min-partition-count: 1
+      bindings:
+        log:
+          destination: usercollection.readData
+          producer:
+            partitionCount: 3
   zipkin:
     base-url: http://zipkin-server:${zipkin_port}
 datasource:
