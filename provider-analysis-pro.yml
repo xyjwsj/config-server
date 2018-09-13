@@ -1,5 +1,5 @@
 server:
-  port: 8601
+  port: ${run_port}
   error:
     path: /exception/error
 eureka:
