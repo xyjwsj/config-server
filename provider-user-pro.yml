@@ -40,7 +40,7 @@ spring:
 #         producer:
 #           partitionCount: 1
        log:
-         destination: usercollection.readData
+         destination: usercollection
          producer:
            partitionCount: 1
   zipkin:
