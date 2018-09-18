@@ -25,7 +25,7 @@ spring:
           min-partition-count: 1
       bindings:
         log:
-          destination: paycollection.readData
+          destination: paycollection
           producer:
             partitionCount: 3
   zipkin:
