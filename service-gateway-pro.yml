@@ -7,10 +7,10 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: ${eureka_url}
-      registry-fetch-interval-seconds: 5
+      defaultZone : ${eureka_url}
   instance:
     prefer-ip-address: true
+    ip-address: ${host_ip}
 zuul:
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
