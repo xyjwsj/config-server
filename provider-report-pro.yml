@@ -30,27 +30,20 @@ spring:
 #    time-between-eviction-runs-millis: 300000
 #    num-tests-per-eviction-run: 3
 #    min-evictable-idle-time-millis: 3600000
-#  cloud:
-#    stream:
-#      bindings:
-#        report:
-#          destination: report_stream
-#          group: R1
-#          consumer:
-#            autoCommitOffset: false
-#            concurrency: 1
-#            partitioned: false
-#        log:
-#          destination: log_stream
-#          group: L1
-#          consumer:
-#            autoCommitOffset: false
-#            concurrency: 1
-#            partitioned: false
-#      kafka:
-#        binder:
-#          brokers: ${kafka_brokers}
-#          zk-nodes: ${zookeeper_connect}
+  cloud:
+   stream:
+     kafka:
+       binder:
+         brokers: ${kafka_brokers}
+         zk-nodes: ${zookeeper_connect}
+         auto-add-partitions: true
+         auto-create-topics: true
+         min-partition-count: 1
+     bindings:
+       log:
+         destination: gamecollection
+         producer:
+           partitionCount: 1
   zipkin:
     base-url: http://zipkin-server:${zipkin_port}
 datasource:
