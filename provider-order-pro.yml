@@ -28,8 +28,8 @@ spring:
           destination: paycollection
           producer:
             partitionCount: 3
-  zipkin:
-    base-url: http://zipkin-server:${zipkin_port}
+#  zipkin:
+#    base-url: http://zipkin-server:${zipkin_port}
   thymeleaf:
     cache: false
     mode: HTML5
