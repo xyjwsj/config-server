@@ -10,7 +10,7 @@ eureka:
 spring:
   task:
     pool:
-      corePoolSize: 10
+      corePoolSize: 20
       maxPoolSize: 30
       keepAliveSeconds: 10000
       queueCapacity: 30
