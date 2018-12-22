@@ -11,9 +11,9 @@ spring:
   task:
     pool:
       corePoolSize: 10
-      maxPoolSize: 30
-      keepAliveSeconds: 10000
-      queueCapacity: 30
+      maxPoolSize: 20
+      keepAliveSeconds: 300
+      queueCapacity: 1000
  # datasource:
 #    type: com.zaxxer.hikari.HikariDataSource
 #    hikari:
