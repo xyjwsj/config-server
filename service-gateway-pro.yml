@@ -94,18 +94,18 @@ ribbon:
   ConnectTimeout: 60000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 1
-spring:
-  cloud:
-    stream:
-      kafka:
-        binder:
-          brokers: ${kafka_brokers}
-          zk-nodes: ${zookeeper_connect}
-          auto-add-partitions: true
-          auto-create-topics: true
-          min-partition-count: 1
-      bindings:
-        log:
-          destination: gatewaycollection
-          producer:
-            partitionCount: 3
+#spring:
+#  cloud:
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: ${kafka_brokers}
+#          zk-nodes: ${zookeeper_connect}
+#          auto-add-partitions: true
+#          auto-create-topics: true
+#          min-partition-count: 1
+#      bindings:
+#        log:
+#          destination: gatewaycollection
+#          producer:
+#            partitionCount: 3

@@ -14,20 +14,20 @@ spring:
       maxPoolSize: 30
       keepAliveSeconds: 10000
       queueCapacity: 30
-  cloud:
-    stream:
-      kafka:
-        binder:
-          brokers: ${kafka_brokers}
-          zk-nodes: ${zookeeper_connect}
-          auto-add-partitions: true
-          auto-create-topics: true
-          min-partition-count: 1
-      bindings:
-        log:
-          destination: paycollection
-          producer:
-            partitionCount: 3
+#  cloud:
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: ${kafka_brokers}
+#          zk-nodes: ${zookeeper_connect}
+#          auto-add-partitions: true
+#          auto-create-topics: true
+#          min-partition-count: 1
+#      bindings:
+#        log:
+#          destination: paycollection
+#          producer:
+#            partitionCount: 3
 #  zipkin:
 #    base-url: http://zipkin-server:${zipkin_port}
   thymeleaf:
