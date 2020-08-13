@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone : http://192.168.150.158:7001/eureka/
+      defaultZone : http://10.1.129.197:7001/eureka/
     eureka-server-read-timeout-seconds: 30000
   #instance:
    # prefer-ip-address: true

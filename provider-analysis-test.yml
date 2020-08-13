@@ -32,7 +32,7 @@ spring:
   zipkin:
     base-url: http://192.168.20.112:10400
   redis:
-    host: 10.1.1.253
+    host: 10.1.4.74
     port: 6379
     pool:
       max-active: 300
@@ -43,7 +43,7 @@ datasource:
   type: com.zaxxer.hikari.HikariDataSource
   write:
     driver-class-name: com.mysql.jdbc.Driver
-    jdbc-url: jdbc:mysql://10.1.1.253:3306/analysistic_backup?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    jdbc-url: jdbc:mysql://10.1.4.74:3306/analysistic_backup?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
     max-lifetime: 1800000
@@ -54,7 +54,7 @@ datasource:
     minimum-idle: 20
   read:
     driver-class-name: com.mysql.jdbc.Driver
-    jdbc-url: jdbc:mysql://10.1.1.253:3306/analysistic_backup?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    jdbc-url: jdbc:mysql://10.1.4.74:3306/analysistic_backup?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
     max-lifetime: 1800000

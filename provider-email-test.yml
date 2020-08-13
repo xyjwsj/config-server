@@ -11,7 +11,7 @@ eureka:
     ip-address: 10.1.129.197
 proxy:
  enabled: true
- host: 10.1.1.253
+ host: 10.1.4.74
  port: 8118
 hoolai:
   mail:
@@ -47,7 +47,7 @@ spring:
 #      idle-timeout: 600000
 #      minimum-idle: 10
 #    driver-class-name: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://10.1.1.253:3306/foreign_message?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    url: jdbc:mysql://10.1.4.74:3306/foreign_message?useUnicode=true&characterEncoding=utf-8&useSSL=false
 #    username: root
 #    password: hoolai
 #  zipkin:
@@ -56,7 +56,7 @@ datasource:
   type: com.zaxxer.hikari.HikariDataSource
   write:
     driver-class-name: com.mysql.jdbc.Driver
-    jdbc-url: jdbc:mysql://10.1.1.253:3306/foreign_message?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    jdbc-url: jdbc:mysql://10.1.4.74:3306/foreign_message?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
     max-lifetime: 1800000
@@ -67,7 +67,7 @@ datasource:
     minimum-idle: 20
   read:
     driver-class-name: com.mysql.jdbc.Driver
-    jdbc-url: jdbc:mysql://10.1.1.253:3306/foreign_message?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    jdbc-url: jdbc:mysql://10.1.4.74:3306/foreign_message?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: hoolai
     max-lifetime: 1800000
